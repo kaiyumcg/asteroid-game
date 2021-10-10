@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BCF58BB8-9379-9A5A-43A9-93B10B4CA5BC}</ProjectGuid>
+    <ProjectGuid>{E9D28742-F0D6-B873-5F13-F9F98D0AECD8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Asteroid</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -56,28 +56,19 @@
     <Compile Include="Assets\asteroid\Script\Manager\GameManager.cs" />
     <Compile Include="Assets\asteroid\Script\Manager\LevelManager.cs" />
     <Compile Include="Assets\asteroid\Script\Manager\GameUI.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\TestReporter.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\ReporterGUI.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Reporter.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\ReporterMessageReceiver.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\Rotate.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\MultiKeyDictionary.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Asteroids Pack\Assets\Scripts\RandomRotator.cs" />
     <Compile Include="Assets\asteroid\Script\Actor\SpaceShip.cs" />
     <Compile Include="Assets\asteroid\Script\Actor\Asteroid.cs" />
     <Compile Include="Assets\asteroid\Script\Actor\Projectile.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\Destroyer.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\RepositionControl.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\Repositionable.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\ScoreHandler.cs" />
+    <Compile Include="Assets\asteroid\Script\ActorComponent\Destroyer.cs" />
+    <Compile Include="Assets\asteroid\Script\ActorComponent\Repositionable.cs" />
+    <Compile Include="Assets\asteroid\Script\ActorComponent\ScoreHandler.cs" />
     <Compile Include="Assets\asteroid\Script\Manager\CutSceneManager.cs" />
-    <Compile Include="Assets\asteroid\Script\Actor\Pickable.cs" />
     <Compile Include="Assets\asteroid\Script\Actor\Powerup.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\AsteroidBreaker.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\SpaceShipVFX.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\AsteroidVFX.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\PowerupVFX.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\ProjectileVFX.cs" />
+    <Compile Include="Assets\asteroid\Script\ActorComponent\AsteroidBreaker.cs" />
+    <Compile Include="Assets\asteroid\Script\ActorComponent\SpaceShipVFX.cs" />
+    <Compile Include="Assets\asteroid\Script\ActorComponent\AsteroidVFX.cs" />
+    <Compile Include="Assets\asteroid\Script\ActorComponent\PowerupVFX.cs" />
+    <Compile Include="Assets\asteroid\Script\ActorComponent\ProjectileVFX.cs" />
     <Compile Include="Assets\asteroid\Script\DataDefine\Enum\PowerupType.cs" />
     <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\SpaceShipDescription.cs" />
     <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\DifficultyDescription.cs" />
@@ -86,8 +77,14 @@
     <Compile Include="Assets\asteroid\Script\Actor\PlayerWeapon.cs" />
     <Compile Include="Assets\asteroid\Script\Actor\AsteroidSpawner.cs" />
     <Compile Include="Assets\asteroid\Script\Actor\PowerupSpawner.cs" />
-    <Compile Include="Assets\asteroid\Script\Interface\IOriginalControl.cs" />
     <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\WeaponDescription.cs" />
+    <Compile Include="Assets\asteroid\Script\Manager\GameSystem.cs" />
+    <Compile Include="Assets\asteroid\Script\Actor\PlayArea.cs" />
+    <Compile Include="Assets\asteroid\Script\Manager\PoolManager.cs" />
+    <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\PooledItemDescription.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\asteroid\Script\Asteroid.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -276,32 +273,8 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.XRModule.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -650,41 +623,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
-      <Project>{B9655C45-2E71-A3F8-F486-0D8E07AD52FD}</Project>
-      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{C306F178-10AC-A138-56B6-08F7FC165F7A}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
-      <Project>{A1A88B70-AEEF-77DE-4AD0-B17F276B6C92}</Project>
-      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{F1F58474-28AC-26D7-13BF-104FE11B05BC}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{A35067F0-A577-1830-9F01-EDA8428DB47E}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{70EFD00C-24B1-32F4-D70B-6BFF62CA4909}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{5B578BC3-171E-25F3-8E19-B92BFB6DD295}</Project>
-      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{BD6E45F5-F7E5-8283-6972-A12F0BA9C872}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{DD56D828-BA53-C555-50CA-B5DC24861FBC}</Project>
-      <Name>Unity.Mathematics</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

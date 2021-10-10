@@ -63,6 +63,31 @@
     <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\Rotate.cs" />
     <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\MultiKeyDictionary.cs" />
     <Compile Include="Assets\asteroid\ThirdParty\Asteroids Pack\Assets\Scripts\RandomRotator.cs" />
+    <Compile Include="Assets\asteroid\Script\Actor\SpaceShip.cs" />
+    <Compile Include="Assets\asteroid\Script\Actor\Asteroid.cs" />
+    <Compile Include="Assets\asteroid\Script\Actor\Projectile.cs" />
+    <Compile Include="Assets\asteroid\Script\Component\Destroyer.cs" />
+    <Compile Include="Assets\asteroid\Script\Component\RepositionControl.cs" />
+    <Compile Include="Assets\asteroid\Script\Component\Repositionable.cs" />
+    <Compile Include="Assets\asteroid\Script\Component\ScoreHandler.cs" />
+    <Compile Include="Assets\asteroid\Script\Manager\CutSceneManager.cs" />
+    <Compile Include="Assets\asteroid\Script\Actor\Pickable.cs" />
+    <Compile Include="Assets\asteroid\Script\Actor\Powerup.cs" />
+    <Compile Include="Assets\asteroid\Script\Component\AsteroidBreaker.cs" />
+    <Compile Include="Assets\asteroid\Script\Component\SpaceShipVFX.cs" />
+    <Compile Include="Assets\asteroid\Script\Component\AsteroidVFX.cs" />
+    <Compile Include="Assets\asteroid\Script\Component\PowerupVFX.cs" />
+    <Compile Include="Assets\asteroid\Script\Component\ProjectileVFX.cs" />
+    <Compile Include="Assets\asteroid\Script\DataDefine\Enum\PowerupType.cs" />
+    <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\SpaceShipDescription.cs" />
+    <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\DifficultyDescription.cs" />
+    <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\AsteroidDescription.cs" />
+    <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\PowerupDescription.cs" />
+    <Compile Include="Assets\asteroid\Script\Actor\PlayerWeapon.cs" />
+    <Compile Include="Assets\asteroid\Script\Actor\AsteroidSpawner.cs" />
+    <Compile Include="Assets\asteroid\Script\Actor\PowerupSpawner.cs" />
+    <Compile Include="Assets\asteroid\Script\Interface\IOriginalControl.cs" />
+    <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\WeaponDescription.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

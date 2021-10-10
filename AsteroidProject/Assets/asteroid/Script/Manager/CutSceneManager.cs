@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace AsteroidGame.Manager
 {
-    public class GameUI : GameSystem
+    public class CutSceneManager : GameSystem
     {
         internal override void InitSystem()
         {

@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour
+namespace AsteroidGame.Manager
 {
-    // Start is called before the first frame update
-    void Start()
+    public class LevelManager : GameSystem
     {
-        
-    }
+        internal override void InitSystem()
+        {
+            throw new System.NotImplementedException();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        internal override IEnumerator InitSystemAsync()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        internal override void UpdateSystem()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
