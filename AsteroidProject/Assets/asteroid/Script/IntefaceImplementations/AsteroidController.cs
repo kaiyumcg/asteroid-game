@@ -20,12 +20,12 @@ namespace AsteroidGame.InterfaceImpl
         Animator IAIController.AIAnimator => anim;
         NavMeshAgent IAIController.AIAgent => agent;
 
-        void IAIController.ControlInPhysicsUpdate()
+        void IAIController.ControlInPhysicsUpdate(float dt, float fixedDt)
         {
             throw new System.NotImplementedException();
         }
 
-        void IAIController.ControlInUpdate()
+        void IAIController.ControlInUpdate(float dt, float fixedDt)
         {
             throw new System.NotImplementedException();
         }

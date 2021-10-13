@@ -290,6 +290,49 @@ Transform:
   m_Father: {fileID: 1597128239}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &848914538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 848914539}
+  - component: {fileID: 848914540}
+  m_Layer: 0
+  m_Name: TaskManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &848914539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848914538}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1597128239}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848914540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848914538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027d27749b1fe204480013413331a96a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &938640275
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +569,7 @@ MonoBehaviour:
   gameplayComponents: []
   life: 100
   isDead: 0
+  timeScale: 1
   OnStartOrSpawn:
     m_PersistentCalls:
       m_Calls: []
@@ -546,70 +590,6 @@ MonoBehaviour:
   currentScore: 0
   playerController:
     id: 0
-  shootInput:
-    m_Name: Shoot Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: fe93e542-ce58-4b36-b02f-b89dd75319fd
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: a1d541e3-caae-47d5-9c95-42b7f13de388
-      m_Path: <Keyboard>/space
-      m_Interactions: Press
-      m_Processors: 
-      m_Groups: 
-      m_Action: Shoot Input
-      m_Flags: 0
-  accelerationInput:
-    m_Name: Acceleration Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e1dd0e10-d31a-4d25-87a2-bab46bee159a
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 2a4cd6fd-4359-41cf-98e0-48fcd14cb751
-      m_Path: <Keyboard>/upArrow
-      m_Interactions: Press
-      m_Processors: 
-      m_Groups: 
-      m_Action: Acceleration Input
-      m_Flags: 0
-  turnInput:
-    m_Name: Turn Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 7aa8fc36-f413-4c8c-acda-511aab1ab8d2
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: 75ba3906-dbd5-483c-b941-2ccb4f2d1bef
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Turn Input
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: 197c3818-2f31-4ca0-8426-55ab1dc3ada4
-      m_Path: <Keyboard>/leftArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Turn Input
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 68f9f0e7-e884-4f6e-9d6b-cb5edf8b9670
-      m_Path: <Keyboard>/rightArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Turn Input
-      m_Flags: 8
   onShoot:
     m_PersistentCalls:
       m_Calls: []
@@ -625,10 +605,78 @@ MonoBehaviour:
   onStopTurn:
     m_PersistentCalls:
       m_Calls: []
+  isAccelerating: 0
+  isTurning: 0
+  shootInput:
+    m_Name: Shoot Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 46f9da67-252b-401a-a97c-b12c56b03092
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c1b9aa15-73f5-46a7-89fc-e9550ce04b02
+      m_Path: <Keyboard>/space
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shoot Input
+      m_Flags: 0
+  accelerationInput:
+    m_Name: Acceleration Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 996232e3-8a6c-4786-b7d3-901de8c7e270
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a5a77911-da20-4cd7-b747-9fd9a13573d9
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Acceleration Input
+      m_Flags: 0
+  turnInput:
+    m_Name: Turn Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7fd9c1f6-787f-4fd2-b23e-b714ff360236
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: turnAxis
+      m_Id: 78e910f2-0724-4533-8c87-eaf7500fc5e4
+      m_Path: 1DAxis
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Input
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 8553073b-dac1-45f6-8483-55e95a970334
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Input
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: cf27a7ca-cc78-426c-b783-104fac335d64
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Input
+      m_Flags: 8
   references:
     version: 1
     00000000:
       type: {class: SpaceShipController, ns: AsteroidGame.InterfaceImpl, asm: Asteroid}
+      data:
+        shipDescription: {fileID: 11400000, guid: 5b7ae3e60fefe6b488e994f4240cde73, type: 2}
 --- !u!54 &1425611796
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -735,6 +783,7 @@ Transform:
   - {fileID: 1271545402}
   - {fileID: 1473786097}
   - {fileID: 938640277}
+  - {fileID: 848914539}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -755,6 +804,7 @@ MonoBehaviour:
   - {fileID: 1473786096}
   - {fileID: 1271545401}
   - {fileID: 632168058}
+  - {fileID: 848914540}
   asyncWaitForInit: 0
 --- !u!33 &1917469320875748803
 MeshFilter:

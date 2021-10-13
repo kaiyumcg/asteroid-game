@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using GameplayFramework;
 using AsteroidGame.Actor;
+using UnityEngine.InputSystem;
+using AsteroidGame.Data;
+using AsteroidGame.Manager;
 
 namespace AsteroidGame.InterfaceImpl
 {
@@ -20,33 +23,70 @@ namespace AsteroidGame.InterfaceImpl
 
         SpaceShip ship;
         PlayerActor playerActor;
+        [SerializeField] SpaceShipDescription shipDescription;
+        TaskManager taskMan;
 
-        void IPlayerController.ControlInPhysicsUpdate()
+        void IPlayerController.ControlInPhysicsUpdate(float dt, float fixedDt)
         {
 
         }
 
-        void IPlayerController.ControlInUpdate()
+        void IPlayerController.ControlInUpdate(float dt, float fixedDt)
         {
             if (ship.IsTurning)
             {
-                Debug.Log("turn amount: " + ship.TurnValue);
+                _tr.Rotate(0f, shipDescription.TurnSpeed * dt * ship.TurnValue, 0f);
             }
 
             if (ship.IsAccelerating)
             {
-                Debug.Log("go forward!");
+                var fFactor = (shipDescription.MaxSpeed - rgd.velocity.magnitude) / shipDescription.MaxSpeed;
+                var force = _tr.forward * fFactor * shipDescription.Acceleration;
+                rgd.AddForce(force, ForceMode.Force);
+            }
+            else
+            {
+                taskMan.StartTask(GraduallyLowerSpeed(shipDescription.NoAccelerationDragTime));
+            }
+        }
+
+        IEnumerator GraduallyLowerSpeed(float withIn = 0.5f)
+        {
+            var dir = rgd.velocity.normalized;
+            var speed = rgd.velocity.magnitude;
+
+            var lowerSpeed = speed / withIn;
+            while (true)
+            {
+                speed -= lowerSpeed * Time.deltaTime;
+                if (speed <= 0.0f || ship.IsAccelerating)
+                {
+                    if (ship.IsAccelerating == false)
+                    {
+                        rgd.velocity = Vector3.zero;
+                    }
+                    
+                    break;
+                }
+                var vel = dir * speed;
+                rgd.velocity = vel;
+
+                yield return null;
             }
         }
 
         void IPlayerController.OnEndController(PlayerActor player)
         {
-
+            ship.ShootInput.Disable();
+            ship.AccelerationInput.Disable();
+            ship.TurnInput.Disable();
         }
 
         void IPlayerController.OnStartController(PlayerActor player)
         {
+            taskMan = Object.FindObjectOfType<TaskManager>();
             _tr = player._Transform;
+            rgd = player.GetComponent<Rigidbody>();
             playerActor = player;
             ship = (SpaceShip)player;
 
@@ -56,38 +96,49 @@ namespace AsteroidGame.InterfaceImpl
                     "Incompatible controller error!");
             }
 
-            ship.OnShoot.AddListener(Shoot);
+            ship.ShootInput.performed += Shoot;
 
-            ship.OnStartTurn.AddListener(StartTurn);
-            ship.OnStopTurn.AddListener(StopTurn);
+            ship.AccelerationInput.performed += AccelerationStart;
+            ship.AccelerationInput.canceled += AccelerationStop;
 
-            ship.OnStartAcceleration.AddListener(StartForward);
-            ship.OnStopAcceleration.AddListener(StopForward);
+            ship.TurnInput.performed += TurnStart;
+            ship.TurnInput.canceled += TurnStop;
+
+            ship.ShootInput.Enable();
+            ship.AccelerationInput.Enable();
+            ship.TurnInput.Enable();
         }
 
-        void Shoot()
+        void TurnStart(InputAction.CallbackContext context)
         {
-            Debug.Log("shoot it!");
+            ship.TurnValue = context.ReadValue<float>();
+            ship.IsTurning = true;
+            ship.OnStartTurn?.Invoke();
         }
 
-        void StartTurn()
+        void TurnStop(InputAction.CallbackContext context)
         {
-            
+            ship.TurnValue = 0.0f;
+            ship.IsTurning = false;
+            ship.OnStopTurn?.Invoke();
         }
 
-        void StopTurn()
+        void AccelerationStart(InputAction.CallbackContext context)
         {
-            
+            ship.IsAccelerating = true;
+            ship.OnStartAcceleration?.Invoke();
         }
 
-        void StartForward()
+        void AccelerationStop(InputAction.CallbackContext context)
         {
-            
+            ship.IsAccelerating = false;
+            ship.OnStopAcceleration?.Invoke();
         }
 
-        void StopForward()
+        void Shoot(InputAction.CallbackContext context)
         {
-
+            ship.OnShoot?.Invoke();
+            ship.ShootOffensive();
         }
     }
 }

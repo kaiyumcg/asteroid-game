@@ -33,19 +33,19 @@ namespace GameplayFramework
             }
         }
 
-        protected override void UpdateActor()
+        protected override void UpdateActor(float dt, float fixedDt)
         {
             if (AI_Controller != null)
             {
-                AI_Controller.ControlInUpdate();
+                AI_Controller.ControlInUpdate(dt, fixedDt);
             }
         }
 
-        protected override void UpdateActorPhysics()
+        protected override void UpdateActorPhysics(float dt, float fixedDt)
         {
             if (AI_Controller != null)
             {
-                AI_Controller.ControlInPhysicsUpdate();
+                AI_Controller.ControlInPhysicsUpdate(dt, fixedDt);
             }
         }
     }

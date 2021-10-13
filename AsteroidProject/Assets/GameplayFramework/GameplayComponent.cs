@@ -13,8 +13,8 @@ namespace GameplayFramework
     {
         protected internal virtual void OnStartOrSpawnActor() { }
         protected internal virtual void AwakeComponent() { }
-        protected internal abstract void UpdateComponent();
-        protected internal abstract void UpdateComponentPhysics();
+        protected internal abstract void UpdateComponent(float dt, float fixedDt);
+        protected internal abstract void UpdateComponentPhysics(float dt, float fixedDt);
         protected virtual void OnEditorUpdate() { }
 
         private void OnValidate()

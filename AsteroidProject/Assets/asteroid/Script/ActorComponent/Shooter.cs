@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using GameplayFramework;
 
-namespace AsteroidGame.Actor
+namespace AsteroidGame.Components
 {
     /// <summary>
-    /// Spawn powerup from difficulty file and possibly powerup related files.
+    /// Will use an offensive weapon from the inventory/list
     /// </summary>
-    public class PowerupSpawner : GameActor
+    
+    public class Shooter : GameplayComponent
     {
-        protected override void UpdateActor(float dt, float fixedDt)
+        protected override void UpdateComponent(float dt, float fixedDt)
         {
             throw new System.NotImplementedException();
         }
 
-        protected override void UpdateActorPhysics(float dt, float fixedDt)
+        protected override void UpdateComponentPhysics(float dt, float fixedDt)
         {
             throw new System.NotImplementedException();
         }

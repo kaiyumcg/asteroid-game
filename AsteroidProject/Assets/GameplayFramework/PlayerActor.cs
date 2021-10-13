@@ -78,19 +78,19 @@ namespace GameplayFramework
             }
         }
 
-        protected override void UpdateActor()
+        protected override void UpdateActor(float dt, float fixedDt)
         {
             if (PlayerController != null)
             {
-                PlayerController.ControlInUpdate();
+                PlayerController.ControlInUpdate(dt, fixedDt);
             }
         }
 
-        protected override void UpdateActorPhysics()
+        protected override void UpdateActorPhysics(float dt, float fixedDt)
         {
             if (PlayerController != null)
             {
-                PlayerController.ControlInPhysicsUpdate();
+                PlayerController.ControlInPhysicsUpdate(dt, fixedDt);
             }
         }
     }

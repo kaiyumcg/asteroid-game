@@ -81,6 +81,9 @@
     <Compile Include="Assets\Asteroid\Script\ActorComponent\AsteroidVFX.cs" />
     <Compile Include="Assets\Asteroid\Script\ActorComponent\AsteroidBreaker.cs" />
     <Compile Include="Assets\Asteroid\Script\Manager\PoolManager.cs" />
+    <Compile Include="Assets\Asteroid\Script\Manager\TaskManager.cs" />
+    <Compile Include="Assets\Asteroid\Script\ActorComponent\Shooter.cs" />
+    <Compile Include="Assets\Asteroid\Script\DataDefine\Enum\WeaponType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asteroid\Script\Asteroid.asmdef" />

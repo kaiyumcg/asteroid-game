@@ -7,12 +7,12 @@ namespace AsteroidGame.Components
 {
     public class AsteroidVFX : GameplayComponent
     {
-        protected override void UpdateComponent()
+        protected override void UpdateComponent(float dt, float fixedDt)
         {
             throw new System.NotImplementedException();
         }
 
-        protected override void UpdateComponentPhysics()
+        protected override void UpdateComponentPhysics(float dt, float fixedDt)
         {
             throw new System.NotImplementedException();
         }

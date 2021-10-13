@@ -20,7 +20,7 @@ namespace GameplayFramework
 
         void OnStartController(AIActor ai);
         void OnEndController(AIActor ai);
-        void ControlInUpdate();
-        void ControlInPhysicsUpdate();
+        void ControlInUpdate(float dt, float fixedDt);
+        void ControlInPhysicsUpdate(float dt, float fixedDt);
     }
 }

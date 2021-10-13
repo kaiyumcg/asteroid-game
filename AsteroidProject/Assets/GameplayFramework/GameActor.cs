@@ -20,8 +20,8 @@ namespace GameplayFramework
         }
 
         protected virtual void AwakeActor() { }
-        protected abstract void UpdateActor();
-        protected abstract void UpdateActorPhysics();
+        protected abstract void UpdateActor(float dt, float fixedDt);
+        protected abstract void UpdateActorPhysics(float dt, float fixedDt);
         protected virtual void OnEditorUpdate() { }
         public Transform _Transform { get { return _transform; } }
         public GameObject _GameObject { get { return _gameObject; } }
@@ -32,6 +32,7 @@ namespace GameplayFramework
         GameObject _gameObject;
         [SerializeField] float life = 100f;
         [SerializeField] bool isDead = false;
+        [SerializeField] float timeScale = 1.0f;
         float initialLife;
 
         public UnityEvent OnStartOrSpawn, OnDeath;
@@ -40,6 +41,25 @@ namespace GameplayFramework
         public float CurrentLife { get { return life; } }
         public float NormalizedLifeValue { get { return life / initialLife; } }
         public bool IsDead { get { return isDead; } }
+        public float TimeScale { get { return timeScale; } set { timeScale = value; } }
+
+        public T GetGameplayComponent<T>() where T : GameplayComponent
+        {
+            T result = null;
+            if (gameplayComponents != null && gameplayComponents.Count > 0)
+            {
+                for (int i = 0; i < gameplayComponents.Count; i++)
+                {
+                    var gcom = gameplayComponents[i];
+                    if (gcom.GetType() == typeof(T))
+                    {
+                        result = (T)gcom;
+                        break;
+                    }
+                }
+            }
+            return result;
+        }
 
         void ReloadComponents()
         {
@@ -141,23 +161,27 @@ namespace GameplayFramework
 
         void Update()
         {
-            UpdateActor();
+            var dt = Time.deltaTime * timeScale;
+            var fixedDt = Time.fixedDeltaTime;
+            UpdateActor(dt, fixedDt);
 
             if (componentListDirty) { return; }
             for (int i = 0; i < gameplayComponents.Count; i++)
             {
-                gameplayComponents[i].UpdateComponent();
+                gameplayComponents[i].UpdateComponent(dt, fixedDt);
             }
         }
 
         private void FixedUpdate()
         {
-            UpdateActorPhysics();
+            var dt = Time.deltaTime * timeScale;
+            var fixedDt = Time.fixedDeltaTime;
+            UpdateActorPhysics(dt, fixedDt);
 
             if (componentListDirty) { return; }
             for (int i = 0; i < gameplayComponents.Count; i++)
             {
-                gameplayComponents[i].UpdateComponentPhysics();
+                gameplayComponents[i].UpdateComponentPhysics(dt, fixedDt);
             }
         }
     }

@@ -18,7 +18,7 @@ namespace GameplayFramework
         void OnStartController(PlayerActor player);
         void OnEndController(PlayerActor player);
 
-        void ControlInUpdate();
-        void ControlInPhysicsUpdate();
+        void ControlInUpdate(float dt, float fixedDt);
+        void ControlInPhysicsUpdate(float dt, float fixedDt);
     }
 }
