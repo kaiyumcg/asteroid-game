@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// Author: Md. Al Kaiyum(Rumman)
+/// Email: kaiyumce06rumman@gmail.com
+/// AI Controller Interface.
+/// </summary>
 namespace GameplayFramework
 {
     public interface IAIController
@@ -13,6 +18,8 @@ namespace GameplayFramework
         Animator AIAnimator { get; }
         NavMeshAgent AIAgent { get; }
 
+        void OnStartController(AIActor ai);
+        void OnEndController(AIActor ai);
         void ControlInUpdate();
         void ControlInPhysicsUpdate();
     }

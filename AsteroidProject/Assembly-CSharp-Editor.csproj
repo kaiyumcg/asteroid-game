@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,7 +53,10 @@
     <UnityVersion>2020.3.3f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Editor\ReporterEditor.cs" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Editor\ReporterEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -670,6 +673,10 @@
       <Project>{86054F3C-9739-DBB2-9807-F3B44775802A}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
+    <ProjectReference Include="SaveDataMan.csproj">
+      <Project>{80631633-E8FF-F423-6C28-EE819DBD0890}</Project>
+      <Name>SaveDataMan</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
       <Project>{7007EC6E-52A4-9EDB-3FF6-063F873FCAAE}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
@@ -690,6 +697,10 @@
       <Project>{C306F178-10AC-A138-56B6-08F7FC165F7A}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="KGameplayFramework.csproj">
+      <Project>{5393A2EB-E44B-96A0-B013-CC43A27B9728}</Project>
+      <Name>KGameplayFramework</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{B2B79634-70FC-C8ED-3AC1-7923C4FBBE8F}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
@@ -697,6 +708,10 @@
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{C0D0056B-8840-6B4A-E06F-B01E0B28E2CC}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Textus.SerializeReferenceUI.csproj">
+      <Project>{9B673D61-8AC4-E6A1-A9FB-AAB4E3FB16E2}</Project>
+      <Name>Textus.SerializeReferenceUI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
       <Project>{A1A88B70-AEEF-77DE-4AD0-B17F276B6C92}</Project>
@@ -717,6 +732,10 @@
     <ProjectReference Include="Unity.Searcher.Editor.csproj">
       <Project>{2570DED0-DA9F-2098-2F66-958DB42EC47D}</Project>
       <Name>Unity.Searcher.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Asteroid.csproj">
+      <Project>{1E170303-0C9D-363A-80CC-627146FD8CED}</Project>
+      <Name>Asteroid</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
       <Project>{70EFD00C-24B1-32F4-D70B-6BFF62CA4909}</Project>

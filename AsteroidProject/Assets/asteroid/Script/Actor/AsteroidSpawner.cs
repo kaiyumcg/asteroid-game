@@ -1,24 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameplayFramework;
 
 namespace AsteroidGame.Actor
 {
     /// <summary>
     /// Uses the difficulty file to spawn asteroid 
     /// </summary>
-    public class AsteroidSpawner : MonoBehaviour
+    public class AsteroidSpawner : GameActor
     {
-        // Start is called before the first frame update
-        void Start()
+        protected override void UpdateActor()
         {
-
+            throw new System.NotImplementedException();
         }
 
-        // Update is called once per frame
-        void Update()
+        protected override void UpdateActorPhysics()
         {
-
+            throw new System.NotImplementedException();
         }
     }
 }

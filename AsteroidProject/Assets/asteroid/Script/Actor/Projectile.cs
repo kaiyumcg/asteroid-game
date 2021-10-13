@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameplayFramework;
 
 namespace AsteroidGame.Actor
 {
@@ -8,18 +9,16 @@ namespace AsteroidGame.Actor
     /// After spawned, this moves into the given direction. 
     /// Get itself destroyed upon collision with asteroid or too far away from player
     /// </summary>
-    public class Projectile : MonoBehaviour
+    public class Projectile : GameActor
     {
-        // Start is called before the first frame update
-        void Start()
+        protected override void UpdateActor()
         {
-
+            throw new System.NotImplementedException();
         }
 
-        // Update is called once per frame
-        void Update()
+        protected override void UpdateActorPhysics()
         {
-
+            throw new System.NotImplementedException();
         }
     }
 }

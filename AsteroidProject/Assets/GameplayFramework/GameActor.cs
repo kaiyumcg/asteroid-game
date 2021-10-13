@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// Author: Md. Al Kaiyum(Rumman)
+/// Email: kaiyumce06rumman@gmail.com
+/// Placeable actor class that has some commonly used funtionalities
+/// </summary>
 namespace GameplayFramework
 {
     public abstract class GameActor : MonoBehaviour

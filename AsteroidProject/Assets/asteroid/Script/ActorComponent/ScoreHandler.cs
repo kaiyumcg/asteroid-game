@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameplayFramework;
 
-public class ScoreHandler : MonoBehaviour
+namespace AsteroidGame.Components
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ScoreHandler : GameplayComponent
     {
-        
-    }
+        protected override void UpdateComponent()
+        {
+            throw new System.NotImplementedException();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        protected override void UpdateComponentPhysics()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

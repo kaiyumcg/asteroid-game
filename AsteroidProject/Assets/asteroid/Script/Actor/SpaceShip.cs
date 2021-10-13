@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameplayFramework;
 
 namespace AsteroidGame.Actor
 {
@@ -8,18 +9,8 @@ namespace AsteroidGame.Actor
     /// Uses the description file to construct spaceship actor features. 
     /// Has input handling and player control feature along with everything related to player
     /// </summary>
-    public class SpaceShip : MonoBehaviour
+    public class SpaceShip : PlayerActor
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameplayFramework;
 
 namespace AsteroidGame.Actor
 {
@@ -9,18 +10,8 @@ namespace AsteroidGame.Actor
     /// If it touches any player then-> if player has shield then this asteroid is destroyed. Otherwise do damage of the player.
     /// Modify velocity or force if collided with other asteroid?
     /// </summary>
-    public class Asteroid : MonoBehaviour
+    public class Asteroid : AIActor
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        
     }
 }

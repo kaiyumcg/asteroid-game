@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,21 +53,16 @@
     <UnityVersion>2020.3.3f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\Rotate.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\ReporterGUI.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\MultiKeyDictionary.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Reporter.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\ReporterMessageReceiver.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\TestReporter.cs" />
-    <Compile Include="Assets\GameplayFramework\GameSystem.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Asteroids Pack\Assets\Scripts\RandomRotator.cs" />
-    <Compile Include="Assets\GameplayFramework\GameManager.cs" />
-    <Compile Include="Assets\GameplayFramework\GameActor.cs" />
-    <Compile Include="Assets\GameplayFramework\GameplayComponent.cs" />
-    <Compile Include="Assets\GameplayFramework\PlayerActor.cs" />
-    <Compile Include="Assets\GameplayFramework\AIActor.cs" />
-    <Compile Include="Assets\GameplayFramework\IPlayerController.cs" />
-    <Compile Include="Assets\GameplayFramework\IAIController.cs" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\Rotate.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\ReporterGUI.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\MultiKeyDictionary.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Reporter.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\ReporterMessageReceiver.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\TestReporter.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\Asteroids Pack\Assets\Scripts\RandomRotator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -630,6 +625,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="SaveDataMan.csproj">
+      <Project>{80631633-E8FF-F423-6C28-EE819DBD0890}</Project>
+      <Name>SaveDataMan</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
       <Project>{B9655C45-2E71-A3F8-F486-0D8E07AD52FD}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders</Name>
@@ -637,6 +636,14 @@
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
       <Project>{C306F178-10AC-A138-56B6-08F7FC165F7A}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="KGameplayFramework.csproj">
+      <Project>{5393A2EB-E44B-96A0-B013-CC43A27B9728}</Project>
+      <Name>KGameplayFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="Textus.SerializeReferenceUI.csproj">
+      <Project>{9B673D61-8AC4-E6A1-A9FB-AAB4E3FB16E2}</Project>
+      <Name>Textus.SerializeReferenceUI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
       <Project>{A1A88B70-AEEF-77DE-4AD0-B17F276B6C92}</Project>

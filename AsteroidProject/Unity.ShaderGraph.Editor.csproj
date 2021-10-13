@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_3;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;UNITY_ASTC_ONLY_DECOMPRESS;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;NET_STANDARD_2_0</DefineConstants>
+    <DefineConstants>UNITY_2020_3_3;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;UNITY_ASTC_ONLY_DECOMPRESS;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.7</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.11</UnityProjectGeneratorVersion>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2020.3.3f1</UnityVersion>
@@ -158,8 +158,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Views\MaterialGraphView.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Texture\SampleVirtualTextureNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Enumerations\BlendOp.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Interface\IShaderString.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Target.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Interface\IShaderString.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Util\PooledHashSet.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Round\CeilingNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Inspector\PropertyDrawers\ToggleDataPropertyDrawer.cs" />
@@ -176,8 +176,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Descriptors\PassDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Serialization\RefDataEnumerable.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Trigonometry\ArccosineNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Texture\Texture3DAssetNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Procedural\Noise\VoronoiNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Texture\Texture3DAssetNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Contexts\TargetSetupContext.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Collections\DependencyCollection.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Interfaces\IMayRequireCameraOpaqueTexture.cs" />
@@ -201,8 +201,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Scene\FogNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Utility\Logic\IsInfiniteNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Inspector\InspectorView.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Contexts\TargetFieldContext.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\StickyNoteData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Contexts\TargetFieldContext.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Inspector\PropertyDrawers\Vector2PropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Trigonometry\CosineNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Vector\DistanceNode.cs" />
@@ -214,11 +214,11 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Channel\SwizzleNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Matrix\Matrix4Node.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Collections\AssetCollection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Collections\FieldCollection.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Range\RemapNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Trigonometry\DegreesToRadiansNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Procedural\Shape\RectangleNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Attributes\SGPropertyDrawerAttribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Collections\FieldCollection.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\BooleanShaderProperty.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\GuidEncoder.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Importers\ShaderSubGraphImporter.cs" />
@@ -298,9 +298,9 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Views\IdentifierField.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Interfaces\IMayRequireVertexColor.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Enumerations\IncludeLocation.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Lighting\AmbientNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Extensions\StencilExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Artistic\Adjustment\HueNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Lighting\AmbientNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Util\FunctionRegistry.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Texture\CubemapAssetNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Trigonometry\SineNode.cs" />
@@ -323,12 +323,12 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Utility\Logic\IsFrontFaceNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Procedural\Noise\GradientNoiseNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Artistic\Blend\BlendMode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Inspector\PropertyDrawers\CustomFunctionNodePropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Inspector\PropertyDrawers\SubGraphOutputNodePropertyDrawer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\ParentGroupChange.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\CubemapShaderProperty.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Scene\ScreenNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\SearchWindowAdapter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\ParentGroupChange.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Inspector\PropertyDrawers\CustomFunctionNodePropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Texture\TexelSizeNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Procedural\Noise\SimpleNoiseNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Collections\DefineCollection.cs" />
@@ -340,9 +340,9 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Util\GraphUtil.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Descriptors\StencilDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Scene\CameraNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\SearchWindowProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Legacy\UnlitMasterNode1.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Contexts\TargetPropertyGUIContext.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\SearchWindowProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Vector\FresnelEffectNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Views\Slots\ColorRGBSlotControlView.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Wave\SquareWaveNode.cs" />
@@ -405,16 +405,16 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Util\QueuePool.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Views\Slots\Texture3DSlotControlView.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Texture\SampleCubemapNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\SerializableTexture.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Utility\PreviewNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\SerializableTexture.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Geometry\ScreenPositionNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Utility\Logic\ComparisonNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\MatrixShaderProperty.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\OutputMetadata.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Implementation\SlotType.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Controls\TextureArrayControl.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Inspector\PropertyDrawers\GradientPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\LegacyUnknownTypeNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Controls\TextureArrayControl.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Controls\ObjectControl.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Colors\NoColors.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Colors\ColorManager.cs" />
@@ -438,11 +438,11 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\SubTarget.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\Texture3DMaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Inspector\PropertyDrawers\BoolPropertyDrawer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Channel\SplitNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Util\Logging.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Channel\SplitNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Range\MinimumNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Importers\ShaderGraphAssetPostProcessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Enumerations\InstancingOptions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Importers\ShaderGraphAssetPostProcessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\NormalMapSpace.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\TargetResources\StructFields.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Views\ReorderableTextListView.cs" />
@@ -495,9 +495,9 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Legacy\SlotReference0.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Inspector\PropertyDrawers\ColorPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\IMaterialGraphAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Interfaces\IMayRequireDepthTexture.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\GroupData.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\Vector1MaterialSlot.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Interfaces\IMayRequireDepthTexture.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Texture\SampleRawCubemapNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Descriptors\PragmaDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Texture\ProceduralVirtualTextureNode.cs" />
@@ -506,8 +506,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Legacy\SpriteUnlitMasterNode1.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\ViewDirectionMaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\Texture3DShaderProperty.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\PositionMaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\CodeFunctionNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\PositionMaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Data\FieldDependency.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Inspector\PropertyDrawers\IShaderPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Gradient\SampleGradientNode.cs" />
@@ -516,8 +516,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Contexts\TargetActiveBlockContext.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Colors\PrecisionColors.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\ColorRGBMaterialSlot.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\UVMaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Inspector\TabbedView\TabbedView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\UVMaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Round\SignNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\SamplerStateMaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Controls.cs" />
@@ -530,8 +530,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Basic\Vector4Node.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Processors\ActiveFields.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Legacy\SerializableGuid.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\TitleAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Drawing\Views\Slots\TextureArraySlotControlView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\TitleAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Math\Advanced\ReciprocalSquareRootNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\DynamicMatrixMaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Nodes\Input\Geometry\ViewDirectionNode.cs" />
@@ -643,75 +643,77 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Data\Graphs\SamplerStateShaderProperty.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Shaders\BlitNoAlpha.shader" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\TabbedView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\IntegerControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\HelpBoxRow.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Resizable.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ScreenPositionSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PixelCacheProfiler.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\CubemapSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\MasterPreviewView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\RedirectNode.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\TextureArraySlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Templates\BuildVertexDescriptionInputs.template.hlsl" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\ShaderPort.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PropertyNameReferenceField.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Templates\BuildSurfaceDescriptionInputs.template.hlsl" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\GraphSubWindow.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\TabButton.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\MaterialNodeView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\StickyNote.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\SliderControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PropertyNodeView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\MaterialGraph.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\PopupControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\GradientSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\ReorderableSlotListView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\EnumConversionControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ColorRGBASlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\DielectricSpecularControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\HlslFunctionView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\NodeSettings.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\BooleanSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\ShaderGraphBlackboard.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\InspectorView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Selectable.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\MultiFloatControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\EnumControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\GraphEditorView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\MultiFloatSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\StickyNote.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\GraphView\BlackboardRow.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\NodeSettings.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\TextureSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\UVSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ChannelMixerControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\MaterialGraphView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\ColorMode.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PropertyRow.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ToggleControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Shaders\FallbackError.shader" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ColorControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\GraphView\BlackboardSection.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PortInputView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Shaders\Checkerboard.shader" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PropertySheet.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\TabButtonStyles.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\GraphInspector.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Templates\PassMesh.template" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ChannelEnumMaskControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\Texture3DSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\GradientControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ChannelEnumControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\ShaderPropertyView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\GraphSubWindow.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\Resizable.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Unity.ShaderGraph.Editor.asmdef" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\GraphView\Blackboard.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\PixelCacheProfiler.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Blackboard.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ColorRGBSlotControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Shaders\BlitNoAlpha.shader" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\TabbedView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\IntegerControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\HelpBoxRow.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Resizable.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ScreenPositionSlotControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PixelCacheProfiler.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\CubemapSlotControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\MasterPreviewView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\RedirectNode.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\TextureArraySlotControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Templates\BuildVertexDescriptionInputs.template.hlsl" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\ShaderPort.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PropertyNameReferenceField.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Templates\BuildSurfaceDescriptionInputs.template.hlsl" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\GraphSubWindow.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\TabButton.uxml" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\MaterialNodeView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\StickyNote.uxml" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\SliderControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PropertyNodeView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\MaterialGraph.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\PopupControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\GradientSlotControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\ReorderableSlotListView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\EnumConversionControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ColorRGBASlotControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\DielectricSpecularControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\HlslFunctionView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\NodeSettings.uxml" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\BooleanSlotControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\ShaderGraphBlackboard.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\InspectorView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Selectable.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\MultiFloatControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\EnumControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\GraphEditorView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\MultiFloatSlotControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\StickyNote.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\GraphView\BlackboardRow.uxml" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\NodeSettings.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\TextureSlotControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\UVSlotControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ChannelMixerControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\MaterialGraphView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\ColorMode.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PropertyRow.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ToggleControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Shaders\FallbackError.shader" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ColorControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\GraphView\BlackboardSection.uxml" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PortInputView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Shaders\Checkerboard.shader" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\PropertySheet.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\TabButtonStyles.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\GraphInspector.uxml" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Generation\Templates\PassMesh.template" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ChannelEnumMaskControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\Texture3DSlotControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\GradientControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ChannelEnumControlView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\ShaderPropertyView.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\GraphSubWindow.uxml" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\Resizable.uxml" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Unity.ShaderGraph.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\GraphView\Blackboard.uxml" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\UXML\PixelCacheProfiler.uxml" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Blackboard.uss" />
+    <None Include="Library\PackageCache\com.unity.shadergraph@10.4.0\Editor\Resources\Styles\Controls\ColorRGBSlotControlView.uss" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

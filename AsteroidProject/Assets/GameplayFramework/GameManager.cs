@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Author: Md. Al Kaiyum(Rumman)
+/// Email: kaiyumce06rumman@gmail.com
+/// Game Manager to controll the game systems
+/// </summary>
 namespace GameplayFramework
 {
     public class GameManager : MonoBehaviour
@@ -9,8 +14,7 @@ namespace GameplayFramework
         [SerializeField] List<GameSystem> allSystems = new List<GameSystem>();
         [SerializeField] bool asyncWaitForInit = false;
 
-        // Start is called before the first frame update
-        IEnumerator Start()
+        void ReloadSysData()
         {
             if (allSystems == null) { allSystems = new List<GameSystem>(); }
             var allsys = FindObjectsOfType<GameSystem>();
@@ -27,6 +31,19 @@ namespace GameplayFramework
                 }
             }
 
+            allSystems.RemoveAll((sys) => { return sys == null; });
+            if (allSystems == null) { allSystems = new List<GameSystem>(); }
+        }
+
+        private void OnValidate()
+        {
+            ReloadSysData();
+        }
+
+        // Start is called before the first frame update
+        IEnumerator Start()
+        {
+            ReloadSysData();
             if (allSystems.Count > 0)
             {
                 for (int i = 0; i < allSystems.Count; i++)

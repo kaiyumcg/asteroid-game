@@ -1,20 +1,37 @@
+using KSaveDataMan;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// Author: Md. Al Kaiyum(Rumman)
+/// Email: kaiyumce06rumman@gmail.com
+/// Player Actor class.
+/// </summary>
 namespace GameplayFramework
 {
     public abstract class PlayerActor : GameActor
     {
+        public UnityEvent<int> OnUpdateScore;
         [SerializeField] bool useDeviceStorageForScore = false;
         [SerializeField] int initialScore;
         [SerializeField] int currentScore;
-        [SerializeReference] [SerializeReferenceButton] IPlayerController Player_Con;
-        public IPlayerController PlayerController { get { return Player_Con; } set { Player_Con = value; } }
+        [SerializeReference] [SerializeReferenceButton] IPlayerController playerController;
+        public IPlayerController PlayerController { get { return playerController; } set { playerController = value; } }
         public int Score { get { return currentScore; } }
-        public UnityEvent<int> OnUpdateScore;
+       
         const string scoreIdentifier = "_Player_Score_";
+        protected virtual void OnDisableActor() { }
+
+        private void OnDisable()
+        {
+            OnDisableActor();
+            if (playerController != null)
+            {
+                playerController.OnEndController(this);
+            }
+        }
 
         protected override void AwakeActor()
         {
@@ -36,6 +53,11 @@ namespace GameplayFramework
             {
                 currentScore = initialScore;
             }
+
+            if (playerController != null)
+            {
+                playerController.OnStartController(this);   
+            }
         }
 
         public void AddScore(int score)
@@ -52,12 +74,18 @@ namespace GameplayFramework
 
         protected override void UpdateActor()
         {
-            Player_Con.ControlInUpdate();
+            if (playerController != null)
+            {
+                playerController.ControlInUpdate();
+            }
         }
 
         protected override void UpdateActorPhysics()
         {
-            Player_Con.ControlInPhysicsUpdate();
+            if (playerController != null)
+            {
+                playerController.ControlInPhysicsUpdate();
+            }
         }
     }
 }
