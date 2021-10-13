@@ -546,10 +546,89 @@ MonoBehaviour:
   currentScore: 0
   playerController:
     id: 0
+  shootInput:
+    m_Name: Shoot Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fe93e542-ce58-4b36-b02f-b89dd75319fd
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a1d541e3-caae-47d5-9c95-42b7f13de388
+      m_Path: <Keyboard>/space
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shoot Input
+      m_Flags: 0
+  accelerationInput:
+    m_Name: Acceleration Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e1dd0e10-d31a-4d25-87a2-bab46bee159a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2a4cd6fd-4359-41cf-98e0-48fcd14cb751
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Acceleration Input
+      m_Flags: 0
+  turnInput:
+    m_Name: Turn Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7aa8fc36-f413-4c8c-acda-511aab1ab8d2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: 75ba3906-dbd5-483c-b941-2ccb4f2d1bef
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Input
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 197c3818-2f31-4ca0-8426-55ab1dc3ada4
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Input
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 68f9f0e7-e884-4f6e-9d6b-cb5edf8b9670
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Input
+      m_Flags: 8
+  onShoot:
+    m_PersistentCalls:
+      m_Calls: []
+  onStartAcceleration:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopAcceleration:
+    m_PersistentCalls:
+      m_Calls: []
+  onStartTurn:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopTurn:
+    m_PersistentCalls:
+      m_Calls: []
   references:
     version: 1
     00000000:
-      type: {class: SpaceShipController, ns: , asm: Asteroid}
+      type: {class: SpaceShipController, ns: AsteroidGame.InterfaceImpl, asm: Asteroid}
 --- !u!54 &1425611796
 Rigidbody:
   m_ObjectHideFlags: 0

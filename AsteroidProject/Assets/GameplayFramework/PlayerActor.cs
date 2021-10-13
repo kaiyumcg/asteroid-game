@@ -13,6 +13,7 @@ namespace GameplayFramework
 {
     public abstract class PlayerActor : GameActor
     {
+        [Header("Player Actor Setting")]
         public UnityEvent<int> OnUpdateScore;
         [SerializeField] bool useDeviceStorageForScore = false;
         [SerializeField] int initialScore;
@@ -20,8 +21,13 @@ namespace GameplayFramework
         
         public abstract IPlayerController PlayerController { get; set; }
         public int Score { get { return currentScore; } }
-       
         const string scoreIdentifier = "_Player_Score_";
+
+        protected override void OnEditorUpdate()
+        {
+            base.OnEditorUpdate();
+        }
+
         protected virtual void OnDisableActor() { }
 
         private void OnDisable()
