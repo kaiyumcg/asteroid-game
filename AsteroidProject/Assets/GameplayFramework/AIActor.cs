@@ -12,41 +12,40 @@ namespace GameplayFramework
 {
     public abstract class AIActor : GameActor
     {
-        [SerializeReference] [SerializeReferenceButton] IAIController AI_Con;
-        public IAIController AI_Controller { get { return AI_Con; } set { AI_Con = value; } }
+        public abstract IAIController AI_Controller { get; set; }
         protected virtual void OnDisableActor() { }
 
         private void OnDisable()
         {
             OnDisableActor();
-            if (AI_Con != null)
+            if (AI_Controller != null)
             {
-                AI_Con.OnEndController(this);
+                AI_Controller.OnEndController(this);
             }
         }
 
         protected override void AwakeActor()
         {
             base.AwakeActor();
-            if (AI_Con != null)
+            if (AI_Controller != null)
             {
-                AI_Con.OnStartController(this);
+                AI_Controller.OnStartController(this);
             }
         }
 
         protected override void UpdateActor()
         {
-            if (AI_Con != null)
+            if (AI_Controller != null)
             {
-                AI_Con.ControlInUpdate();
+                AI_Controller.ControlInUpdate();
             }
         }
 
         protected override void UpdateActorPhysics()
         {
-            if (AI_Con != null)
+            if (AI_Controller != null)
             {
-                AI_Con.ControlInPhysicsUpdate();
+                AI_Controller.ControlInPhysicsUpdate();
             }
         }
     }

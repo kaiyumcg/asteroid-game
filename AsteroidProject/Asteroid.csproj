@@ -680,6 +680,10 @@
       <Project>{5393A2EB-E44B-96A0-B013-CC43A27B9728}</Project>
       <Name>KGameplayFramework</Name>
     </ProjectReference>
+    <ProjectReference Include="Textus.SerializeReferenceUI.csproj">
+      <Project>{9B673D61-8AC4-E6A1-A9FB-AAB4E3FB16E2}</Project>
+      <Name>Textus.SerializeReferenceUI</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{74C756A6-560A-A785-DC82-BCB5E3652629}</Project>
       <Name>UnityEditor.UI</Name>

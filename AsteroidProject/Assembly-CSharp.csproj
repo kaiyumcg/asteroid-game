@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,9 +52,6 @@
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2020.3.3f1</UnityVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\Rotate.cs" />
     <Compile Include="Assets\Asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\ReporterGUI.cs" />
@@ -667,10 +664,6 @@
       <Project>{C0D0056B-8840-6B4A-E06F-B01E0B28E2CC}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Textus.SerializeReferenceUI.csproj">
-      <Project>{9B673D61-8AC4-E6A1-A9FB-AAB4E3FB16E2}</Project>
-      <Name>Textus.SerializeReferenceUI</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
       <Project>{A1A88B70-AEEF-77DE-4AD0-B17F276B6C92}</Project>
       <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
@@ -718,6 +711,10 @@
     <ProjectReference Include="Unity.Mathematics.csproj">
       <Project>{DD56D828-BA53-C555-50CA-B5DC24861FBC}</Project>
       <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Textus.SerializeReferenceUI.csproj">
+      <Project>{9B673D61-8AC4-E6A1-A9FB-AAB4E3FB16E2}</Project>
+      <Name>Textus.SerializeReferenceUI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

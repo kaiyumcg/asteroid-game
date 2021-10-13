@@ -17,8 +17,8 @@ namespace GameplayFramework
         [SerializeField] bool useDeviceStorageForScore = false;
         [SerializeField] int initialScore;
         [SerializeField] int currentScore;
-        [SerializeReference] [SerializeReferenceButton] IPlayerController playerController;
-        public IPlayerController PlayerController { get { return playerController; } set { playerController = value; } }
+        
+        public abstract IPlayerController PlayerController { get; set; }
         public int Score { get { return currentScore; } }
        
         const string scoreIdentifier = "_Player_Score_";
@@ -27,9 +27,9 @@ namespace GameplayFramework
         private void OnDisable()
         {
             OnDisableActor();
-            if (playerController != null)
+            if (PlayerController != null)
             {
-                playerController.OnEndController(this);
+                PlayerController.OnEndController(this);
             }
         }
 
@@ -54,9 +54,9 @@ namespace GameplayFramework
                 currentScore = initialScore;
             }
 
-            if (playerController != null)
+            if (PlayerController != null)
             {
-                playerController.OnStartController(this);   
+                PlayerController.OnStartController(this);   
             }
         }
 
@@ -74,17 +74,17 @@ namespace GameplayFramework
 
         protected override void UpdateActor()
         {
-            if (playerController != null)
+            if (PlayerController != null)
             {
-                playerController.ControlInUpdate();
+                PlayerController.ControlInUpdate();
             }
         }
 
         protected override void UpdateActorPhysics()
         {
-            if (playerController != null)
+            if (PlayerController != null)
             {
-                playerController.ControlInPhysicsUpdate();
+                PlayerController.ControlInPhysicsUpdate();
             }
         }
     }

@@ -11,6 +11,8 @@ namespace AsteroidGame.Actor
     /// </summary>
     public class SpaceShip : PlayerActor
     {
-        
+        [SerializeReference] [SerializeReferenceButton] IPlayerController playerController;
+
+        public override IPlayerController PlayerController { get => playerController; set => playerController = value; }
     }
 }

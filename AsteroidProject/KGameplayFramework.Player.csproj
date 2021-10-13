@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,9 +52,6 @@
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2020.3.3f1</UnityVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameplayFramework\AIActor.cs" />
     <Compile Include="Assets\GameplayFramework\IAIController.cs" />
@@ -605,10 +602,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Textus.SerializeReferenceUI.csproj">
-      <Project>{9B673D61-8AC4-E6A1-A9FB-AAB4E3FB16E2}</Project>
-      <Name>Textus.SerializeReferenceUI</Name>
-    </ProjectReference>
     <ProjectReference Include="SaveDataMan.csproj">
       <Project>{80631633-E8FF-F423-6C28-EE819DBD0890}</Project>
       <Name>SaveDataMan</Name>

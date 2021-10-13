@@ -12,6 +12,8 @@ namespace AsteroidGame.Actor
     /// </summary>
     public class Asteroid : AIActor
     {
-        
+        [SerializeReference] [SerializeReferenceButton] IAIController AI_Con;
+
+        public override IAIController AI_Controller { get => AI_Con; set => AI_Con = value; }
     }
 }
