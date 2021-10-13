@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AsteroidGame.Manager
+namespace GameplayFramework
 {
     public class GameManager : MonoBehaviour
     {

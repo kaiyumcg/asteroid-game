@@ -53,41 +53,21 @@
     <UnityVersion>2020.3.3f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\asteroid\Script\Manager\GameManager.cs" />
-    <Compile Include="Assets\asteroid\Script\Manager\LevelManager.cs" />
-    <Compile Include="Assets\asteroid\Script\Manager\GameUI.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\TestReporter.cs" />
+    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\Rotate.cs" />
     <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\ReporterGUI.cs" />
+    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\MultiKeyDictionary.cs" />
     <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Reporter.cs" />
     <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\ReporterMessageReceiver.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\Rotate.cs" />
-    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\MultiKeyDictionary.cs" />
+    <Compile Include="Assets\asteroid\ThirdParty\Unity-Logs-Viewer\Reporter\Test\TestReporter.cs" />
+    <Compile Include="Assets\GameplayFramework\GameSystem.cs" />
     <Compile Include="Assets\asteroid\ThirdParty\Asteroids Pack\Assets\Scripts\RandomRotator.cs" />
-    <Compile Include="Assets\asteroid\Script\Actor\SpaceShip.cs" />
-    <Compile Include="Assets\asteroid\Script\Actor\Asteroid.cs" />
-    <Compile Include="Assets\asteroid\Script\Actor\Projectile.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\Destroyer.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\RepositionControl.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\Repositionable.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\ScoreHandler.cs" />
-    <Compile Include="Assets\asteroid\Script\Manager\CutSceneManager.cs" />
-    <Compile Include="Assets\asteroid\Script\Actor\Pickable.cs" />
-    <Compile Include="Assets\asteroid\Script\Actor\Powerup.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\AsteroidBreaker.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\SpaceShipVFX.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\AsteroidVFX.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\PowerupVFX.cs" />
-    <Compile Include="Assets\asteroid\Script\Component\ProjectileVFX.cs" />
-    <Compile Include="Assets\asteroid\Script\DataDefine\Enum\PowerupType.cs" />
-    <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\SpaceShipDescription.cs" />
-    <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\DifficultyDescription.cs" />
-    <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\AsteroidDescription.cs" />
-    <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\PowerupDescription.cs" />
-    <Compile Include="Assets\asteroid\Script\Actor\PlayerWeapon.cs" />
-    <Compile Include="Assets\asteroid\Script\Actor\AsteroidSpawner.cs" />
-    <Compile Include="Assets\asteroid\Script\Actor\PowerupSpawner.cs" />
-    <Compile Include="Assets\asteroid\Script\Interface\IOriginalControl.cs" />
-    <Compile Include="Assets\asteroid\Script\DataDefine\ScriptableObject\WeaponDescription.cs" />
+    <Compile Include="Assets\GameplayFramework\GameManager.cs" />
+    <Compile Include="Assets\GameplayFramework\GameActor.cs" />
+    <Compile Include="Assets\GameplayFramework\GameplayComponent.cs" />
+    <Compile Include="Assets\GameplayFramework\PlayerActor.cs" />
+    <Compile Include="Assets\GameplayFramework\AIActor.cs" />
+    <Compile Include="Assets\GameplayFramework\IPlayerController.cs" />
+    <Compile Include="Assets\GameplayFramework\IAIController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -703,6 +683,10 @@
     <ProjectReference Include="Unity.Searcher.Editor.csproj">
       <Project>{2570DED0-DA9F-2098-2F66-958DB42EC47D}</Project>
       <Name>Unity.Searcher.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Asteroid.csproj">
+      <Project>{1E170303-0C9D-363A-80CC-627146FD8CED}</Project>
+      <Name>Asteroid</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
       <Project>{70EFD00C-24B1-32F4-D70B-6BFF62CA4909}</Project>

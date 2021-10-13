@@ -1,3 +1,4 @@
+using GameplayFramework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,17 +7,17 @@ namespace AsteroidGame.Manager
 {
     public class LevelManager : GameSystem
     {
-        internal override void InitSystem()
+        protected override void InitSystem()
         {
             throw new System.NotImplementedException();
         }
 
-        internal override IEnumerator InitSystemAsync()
+        protected override IEnumerator InitSystemAsync()
         {
             throw new System.NotImplementedException();
         }
 
-        internal override void UpdateSystem()
+        protected override void UpdateSystem()
         {
             throw new System.NotImplementedException();
         }

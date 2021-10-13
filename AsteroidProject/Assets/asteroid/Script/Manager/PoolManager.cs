@@ -1,3 +1,4 @@
+using GameplayFramework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,20 +26,7 @@ namespace AsteroidGame.Manager
     {
         [SerializeField] List<PooledItem> poolStore = new List<PooledItem>();
 
-        internal override void InitSystem()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        internal override IEnumerator InitSystemAsync()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        internal override void UpdateSystem()
-        {
-            throw new System.NotImplementedException();
-        }
+        
 
         public Transform Clone(Transform prefab)
         {
@@ -46,6 +34,21 @@ namespace AsteroidGame.Manager
         }
 
         public void Free(Transform sceneObject)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected override void InitSystem()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected override IEnumerator InitSystemAsync()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected override void UpdateSystem()
         {
             throw new System.NotImplementedException();
         }

@@ -1,3 +1,16 @@
 {
-	"name": "Asteroid"
+    "name": "Asteroid",
+    "rootNamespace": "",
+    "references": [
+        "GUID:be72f57680fb8e04681ec18bb5714335"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
