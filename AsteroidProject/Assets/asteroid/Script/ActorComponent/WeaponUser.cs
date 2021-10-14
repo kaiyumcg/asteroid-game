@@ -72,7 +72,7 @@ namespace AsteroidGame.Components
             var fCount = 0;
             while (true)
             {
-                if (fCount >= count)
+                if (fCount >= count - 1)
                 {
                     yield break;
                 }

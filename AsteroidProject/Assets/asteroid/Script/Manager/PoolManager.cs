@@ -59,7 +59,7 @@ namespace AsteroidGame.Manager
         internal bool IsItFree { get { return clonedItemObject.activeInHierarchy == false; } }
         internal void MakeFree()
         {
-            clonedItemObject.SetActive(true);
+            clonedItemObject.SetActive(false);
         }
     }
 
