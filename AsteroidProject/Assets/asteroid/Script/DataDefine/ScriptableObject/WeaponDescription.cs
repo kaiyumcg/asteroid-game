@@ -9,17 +9,27 @@ namespace AsteroidGame.Data
     public class WeaponDescription : ScriptableObject
     {
         [SerializeField] bool isOffensive = true;
-        [SerializeField] int offensiveCount = 100;
+        [SerializeField] int amount = 100;
         [SerializeField] bool isInfinite = true;
         [SerializeField] PlayerWeapon weaponPrefab;
         [SerializeField] float lifeTimeAfterStart = 10f;
-        [SerializeField] int offensiveBurstCount = 3;
+        [SerializeField] bool burstAble = false;
+        [SerializeField] int burstCount = 3;
+        [SerializeField] float burstGapTime = 0.2f;
+        [SerializeField] float hitAmount = 4f;
+        [SerializeField] float maxSpeedIfProjectile = 5f;
+        [SerializeField] float shootForceIfProjectile = 2f;
 
         public bool IsOffensive { get { return isOffensive; } }
-        public int OffensiveCount { get { return offensiveCount; } }
+        public int Amount { get { return amount; } }
         public bool IsInfinite { get { return isInfinite; } }
         public PlayerWeapon WeaponPrefab { get { return weaponPrefab; } }
         public float LifeTimeAfterStart { get { return lifeTimeAfterStart; } }
-        public int OffensiveBurstCount { get { return offensiveBurstCount; } }
+        public int BurstCount { get { return burstCount; } }
+        public float BurstGapTime { get { return burstGapTime; } }
+        public bool BurstAble { get { return burstAble; } }
+        public float HitAmount { get { return hitAmount; } }
+        public float MaxSpeedIfProjectile { get { return maxSpeedIfProjectile; } }
+        public float ShootForceIfProjectile { get { return shootForceIfProjectile; } }
     }
 }

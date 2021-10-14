@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9890779591b077441be81799b1e751f2, type: 3}
+  m_Name: barrierWeapon
+  m_EditorClassIdentifier: 
+  isOffensive: 0
+  amount: 100
+  isInfinite: 1
+  weaponPrefab: {fileID: 1506819079818255141, guid: bab610cdac530254e80a1c87dfc1e1f4, type: 3}
+  lifeTimeAfterStart: 10
+  burstAble: 0
+  burstCount: 3
+  burstGapTime: 0.2
+  hitAmount: 4
+  maxSpeedIfProjectile: 5
+  shootForceIfProjectile: 2

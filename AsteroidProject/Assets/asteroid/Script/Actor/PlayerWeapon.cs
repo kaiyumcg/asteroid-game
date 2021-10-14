@@ -6,9 +6,7 @@ using AsteroidGame.Data;
 
 namespace AsteroidGame.Actor
 {
-    //Weapon should be scriptable object data that will be mutable upon gameplay start.
-    //Meaning they will contain data that changes. So we clone then first before usage ensuring asset validity with gameplay.
-    //We will destroy the clones of them on destroy.
+    
 
     //Shooter component is not necessary. Instead the component will be "WeaponUser".
     //At a time defensive and offensive weapon can be active. At a time only one offensive can be active
@@ -26,14 +24,48 @@ namespace AsteroidGame.Actor
     //Weapon is spawned. Now do its work i.e. collided with asterioid or destroyed or other etc
     public class PlayerWeapon : GameActor
     {
+        [SerializeField] WeaponDescription weaponData;
+        WeaponState state;
+        SpaceShip origin;
+
+        public void SetWeapon(WeaponDescription weaponData, WeaponState stateData, SpaceShip origin)
+        {
+            this.weaponData = weaponData;
+            this.state = stateData;
+            this.origin = origin;
+            StartCoroutine(WeaponInitAsync());
+        }
+
+        IEnumerator WeaponInitAsync()
+        {
+            //if defensive then look for mesh tag and make child of this to it
+            //and then compute until we hit an asteroid, if yes then reduce amount
+            //when amount is less than zero or equal, we destroy or send weapon to pool manager
+
+            //if however it is offensive then simply add force with parameter towards ship's forward direction
+            //and then compute until we hit asteroid or destroyer tag. In both case, we simply destroy this actor through pool manager
+
+            yield return null;
+            
+        }
+
+        protected override void OnCleanupActor()
+        {
+            base.OnCleanupActor();
+            StopAllCoroutines();
+            weaponData = null;
+            state = null;
+            origin = null;
+        }
+
         protected override void UpdateActor(float dt, float fixedDt)
         {
-            throw new System.NotImplementedException();
+            //throw new System.NotImplementedException();
         }
 
         protected override void UpdateActorPhysics(float dt, float fixedDt)
         {
-            throw new System.NotImplementedException();
+            //throw new System.NotImplementedException();
         }
     }
 }

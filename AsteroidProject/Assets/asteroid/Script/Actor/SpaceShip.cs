@@ -19,6 +19,7 @@ namespace AsteroidGame.Actor
         [SerializeReference] [SerializeReferenceButton] IPlayerController playerController;
         [SerializeField] UnityEvent onShoot, onStartAcceleration, onStopAcceleration, onStartTurn, onStopTurn;
         [SerializeField] InputAction shootInput, accelerationInput, turnInput;
+        [SerializeField] Transform weaponSpawnOrigin;
         public bool isAccelerating = false, isTurning = false;
         float turnValue = 0.0f;
 
@@ -36,6 +37,7 @@ namespace AsteroidGame.Actor
         public InputAction ShootInput { get { return shootInput; } }
         public InputAction AccelerationInput { get { return accelerationInput; } }
         public InputAction TurnInput { get { return turnInput; } }
+        public Transform WeaponSpawnOrigin { get { return weaponSpawnOrigin; } }
 
         List<WeaponUser> weaponHandlers;
 
@@ -58,7 +60,7 @@ namespace AsteroidGame.Actor
                 {
                     var handler = weaponHandlers[i];
                     if (handler == null) { continue; }
-                    handler.UseOffensive();
+                    handler.UseWeapon(Data.WeaponType.Offensive);
                 }
             }
         }

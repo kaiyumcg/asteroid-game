@@ -20,8 +20,8 @@ namespace GameplayFramework
         }
 
         protected virtual void AwakeActor() { }
-        protected abstract void UpdateActor(float dt, float fixedDt);
-        protected abstract void UpdateActorPhysics(float dt, float fixedDt);
+        protected virtual void UpdateActor(float dt, float fixedDt) { }
+        protected virtual void UpdateActorPhysics(float dt, float fixedDt) { }
         protected virtual void OnEditorUpdate() { ReloadComponents(); }
         protected virtual void OnCleanupActor() { }
 
@@ -94,7 +94,7 @@ namespace GameplayFramework
             void GatherGameplayComponents(Transform tr, ref List<GameplayComponent> compList)
             {
                 var selfActor = tr.GetComponent<GameActor>();
-                if (selfActor != this)
+                if (selfActor != null && selfActor != this)
                 {
                     return;
                 }
@@ -109,6 +109,7 @@ namespace GameplayFramework
                         if (compList == null) { compList = new List<GameplayComponent>(); }
                         if (compList.Contains(comp) == false)
                         {
+                            comp.SetOwner(this);
                             compList.Add(comp);
                         }
                     }
@@ -167,6 +168,7 @@ namespace GameplayFramework
             var comp = objOnWhichToAdd.AddComponent<T>();
             if (gameplayComponents.Contains(comp) == false)
             {
+                comp.SetOwner(this);
                 gameplayComponents.Add(comp);
             }
             componentListDirty = false;

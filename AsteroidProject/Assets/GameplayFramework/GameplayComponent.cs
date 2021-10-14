@@ -13,10 +13,18 @@ namespace GameplayFramework
     {
         protected internal virtual void OnStartOrSpawnActor() { }
         protected internal virtual void AwakeComponent() { }
-        protected internal abstract void UpdateComponent(float dt, float fixedDt);
-        protected internal abstract void UpdateComponentPhysics(float dt, float fixedDt);
+        protected internal virtual void UpdateComponent(float dt, float fixedDt) { }
+        protected internal virtual void UpdateComponentPhysics(float dt, float fixedDt) { }
         protected virtual void OnEditorUpdate() { }
         protected internal virtual void OnCleanupComponent() { }
+
+        internal void SetOwner(GameActor actor)
+        {
+            owner = actor;
+        }
+
+        [SerializeField] [HideInInspector] GameActor owner;
+        public GameActor Owner { get { return owner; } }
 
         private void OnValidate()
         {
