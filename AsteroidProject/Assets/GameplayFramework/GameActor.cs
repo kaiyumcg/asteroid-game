@@ -33,9 +33,10 @@ namespace GameplayFramework
         Transform _transform;
         GameObject _gameObject;
         [SerializeField] float life = 100f;
-        [SerializeField] bool isDead = false;
+        bool isDead = false;
         [SerializeField] float timeScale = 1.0f;
         float initialLife;
+        GameManager gameMan_Core;
 
         public UnityEvent OnStartOrSpawn, OnDeath;
         public UnityEvent<float> OnDamage, OnGainHealth;
@@ -205,6 +206,8 @@ namespace GameplayFramework
             {
                 OnDeath?.Invoke();
             }
+
+            gameMan_Core = FindObjectOfType<GameManager>();
         }
 
         private void OnEnable()
@@ -227,6 +230,8 @@ namespace GameplayFramework
 
         void Update()
         {
+            if (gameMan_Core.HasGameBeenStarted == false) { return; }
+
             var dt = Time.deltaTime * timeScale;
             var fixedDt = Time.fixedDeltaTime;
             UpdateActor(dt, fixedDt);
@@ -240,6 +245,8 @@ namespace GameplayFramework
 
         private void FixedUpdate()
         {
+            if (gameMan_Core.HasGameBeenStarted == false) { return; }
+
             var dt = Time.deltaTime * timeScale;
             var fixedDt = Time.fixedDeltaTime;
             UpdateActorPhysics(dt, fixedDt);

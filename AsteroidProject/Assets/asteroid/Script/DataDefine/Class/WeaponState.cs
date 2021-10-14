@@ -19,13 +19,11 @@ namespace AsteroidGame.Data
         bool active;
         public int Amount { get { return amount; } }
         public WeaponDescription Weapon { get { return weapon; } }
-        public void DepleteDefensiveAmount(int amount)
+
+        public void ClearState()
         {
-            if (weapon.IsOffensive)
-            {
-                throw new System.Exception("This is offensive weapon, you can not deplete its amount from outside! Invalid operation.");
-            }
-            this.amount -= Mathf.Abs(amount);
+            amount = -1;
+            active = false;
         }
 
         public WeaponState(WeaponDescription weapon, WeaponValidityCondition validityCondition)

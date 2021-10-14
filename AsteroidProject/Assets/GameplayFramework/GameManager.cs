@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Author: Md. Al Kaiyum(Rumman)
@@ -9,10 +10,19 @@ using UnityEngine;
 /// </summary>
 namespace GameplayFramework
 {
-    public class GameManager : MonoBehaviour
+    public abstract class GameManager : MonoBehaviour
     {
         [SerializeField] List<GameSystem> allSystems = new List<GameSystem>();
         [SerializeField] bool asyncWaitForInit = false;
+        protected virtual void OnGameStart() { }
+        protected abstract bool WhenGameStarts();
+        protected abstract bool WhenGameEnds();
+        bool gameStarted = false;
+        public bool HasGameBeenStarted { get { return gameStarted; } }
+        protected virtual void AwakeGameManager() { }
+        protected virtual void InitAllGameSystems() { }
+        protected virtual void UpdateGameManager() { }
+        public UnityEvent OnAwakeGameManager, OnInitAllGameSystems, OnStartGameplay, OnEndGame;
 
         void ReloadSysData()
         {
@@ -40,10 +50,32 @@ namespace GameplayFramework
             ReloadSysData();
         }
 
+        public T GetManager<T>() where T : GameSystem
+        {
+            T result = null;
+            if (allSystems != null && allSystems.Count > 0)
+            {
+                for (int i = 0; i < allSystems.Count; i++)
+                {
+                    var sys = allSystems[i];
+                    if (sys == null) { continue; }
+                    if (sys.GetType() == typeof(T))
+                    {
+                        result = (T)sys;
+                        break;
+                    }
+                }
+            }
+
+            return result;
+        }
+
         // Start is called before the first frame update
         IEnumerator Start()
         {
             ReloadSysData();
+            AwakeGameManager();
+            OnAwakeGameManager?.Invoke();
             if (allSystems.Count > 0)
             {
                 for (int i = 0; i < allSystems.Count; i++)
@@ -54,7 +86,9 @@ namespace GameplayFramework
                         throw new System.Exception("By architectural design we do not allow any null system(per frame UnityEngine.Object ==, != check) " +
                             "in the list for performance implication. Please assign valid system(s) in the list!");
                     }
+                    sys.SetGameManager(this);
                     sys.InitSystem();
+
                     if (asyncWaitForInit)
                     {
                         yield return StartCoroutine(sys.InitSystemAsync());
@@ -65,6 +99,33 @@ namespace GameplayFramework
                     }
                 }
             }
+
+            InitAllGameSystems();
+            OnInitAllGameSystems?.Invoke();
+
+            while (true)
+            {
+                if (WhenGameStarts())
+                {
+                    break;
+                }
+
+                yield return null;
+            }
+
+            OnGameStart();
+            OnStartGameplay?.Invoke();
+            gameStarted = true;
+
+            while (true)
+            {
+                if (WhenGameEnds())
+                {
+                    break;
+                }
+                yield return null;
+            }
+            OnEndGame?.Invoke();
         }
 
         // Update is called once per frame
@@ -75,6 +136,7 @@ namespace GameplayFramework
                 var sys = allSystems[i];
                 sys.UpdateSystem();
             }
+            UpdateGameManager();
         }
     }
 }

@@ -145,6 +145,7 @@ namespace AsteroidGame.Manager
 
         public void Free(Transform sceneObject)
         {
+            bool freeSuccess = false;
             if (poolStore != null && poolStore.Count > 0)
             {
                 for (int i = 0; i < poolStore.Count; i++)
@@ -156,9 +157,14 @@ namespace AsteroidGame.Manager
                     if (stateItem.IsItFree == false)
                     {
                         stateItem.MakeFree();
+                        freeSuccess = true;
                         break;
                     }
                 }
+            }
+            if (freeSuccess == false)
+            {
+                sceneObject.gameObject.SetActive(false);
             }
         }
     }

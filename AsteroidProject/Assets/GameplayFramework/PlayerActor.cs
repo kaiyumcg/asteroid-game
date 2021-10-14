@@ -21,7 +21,12 @@ namespace GameplayFramework
         
         public abstract IPlayerController PlayerController { get; set; }
         public int Score { get { return currentScore; } }
-        const string scoreIdentifier = "_Player_Score_";
+        const string lastScoreIdentifier = "_Player_Last_Score_";
+        //todo
+        const string highScoreIdentifier = "_Player_High_Score_";
+        //todo we can actually save a set of commonly used data, playerDataAPI?
+
+        GameManager gameMan;
 
         protected override void OnEditorUpdate()
         {
@@ -32,6 +37,7 @@ namespace GameplayFramework
 
         private void OnDisable()
         {
+            if (gameMan.HasGameBeenStarted == false) { return; }
             OnDisableActor();
             if (PlayerController != null)
             {
@@ -44,15 +50,15 @@ namespace GameplayFramework
             base.AwakeActor();
             if (useDeviceStorageForScore)
             {
-                var diskValue = SaveDataManager.LoadInt(scoreIdentifier, -1);
-                if (diskValue < 0)
+                var diskValue_lastScore = SaveDataManager.LoadInt(lastScoreIdentifier, -1);
+                if (diskValue_lastScore < 0)
                 {
                     currentScore = initialScore;
-                    SaveDataManager.SaveInt(scoreIdentifier, currentScore);
+                    SaveDataManager.SaveInt(lastScoreIdentifier, currentScore);
                 }
                 else
                 {
-                    currentScore = diskValue;
+                    currentScore = diskValue_lastScore;
                 }
             }
             else
@@ -60,10 +66,14 @@ namespace GameplayFramework
                 currentScore = initialScore;
             }
 
-            if (PlayerController != null)
+            gameMan = FindObjectOfType<GameManager>();
+            gameMan.OnStartGameplay.AddListener(() =>
             {
-                PlayerController.OnStartController(this);   
-            }
+                if (PlayerController != null)
+                {
+                    PlayerController.OnStartController(this);
+                }
+            });
         }
 
         public void AddScore(int score)
@@ -74,7 +84,7 @@ namespace GameplayFramework
 
             if (useDeviceStorageForScore)
             {
-                SaveDataManager.SaveInt(scoreIdentifier, currentScore);
+                SaveDataManager.SaveInt(lastScoreIdentifier, currentScore);
             }
         }
 

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7084e1f7771dfb24a838852c05a7366a, type: 3}
+  m_Name: Asteroid2
+  m_EditorClassIdentifier: 
+  maxBreakNum: 2
+  partPrefab: {fileID: 7323657678119137172, guid: cb61c2846792b01498a88178fc2222f0, type: 3}
+  breakableSideForce: 5
+  breakableForceMode: 0
+  scoreToAddIfTotallyBroken: 10
+  destroyOnCollisionWithShip: 1
+  damageToShipOnCollision: 10

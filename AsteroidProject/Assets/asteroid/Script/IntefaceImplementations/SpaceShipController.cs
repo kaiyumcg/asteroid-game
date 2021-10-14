@@ -31,7 +31,9 @@ namespace AsteroidGame.InterfaceImpl
         SpaceShip ship;
         PlayerActor playerActor;
         [SerializeField] SpaceShipDescription shipDescription;
+        public SpaceShipDescription ShipDescription { get { return shipDescription; } set { shipDescription = value; } }
         TaskManager taskMan;
+        GameManager gameMan;
 
         void IPlayerController.ControlInPhysicsUpdate(float dt, float fixedDt)
         {
@@ -89,7 +91,8 @@ namespace AsteroidGame.InterfaceImpl
 
         void IPlayerController.OnStartController(PlayerActor player)
         {
-            taskMan = Object.FindObjectOfType<TaskManager>();
+            gameMan = Object.FindObjectOfType<GameManager>();
+            taskMan = gameMan.GetManager<TaskManager>();
             _tr = player._Transform;
             rgd = player.GetComponent<Rigidbody>();
             playerActor = player;

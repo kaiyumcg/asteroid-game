@@ -63,7 +63,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayComponents: []
   life: 100
-  isDead: 0
   timeScale: 1
   OnStartOrSpawn:
     m_PersistentCalls:
@@ -77,13 +76,9 @@ MonoBehaviour:
   OnGainHealth:
     m_PersistentCalls:
       m_Calls: []
-  maxBreakNum: 2
   AI_Con:
     id: 0
-  partPrefab: {fileID: 2650499312282579364}
-  breakableSideForce: 5
-  breakableForceMode: 0
-  scoreToAddIfTotallyBroken: 10
+  description: {fileID: 11400000, guid: 43dd2b2e6aa7c37429a8a017a925af09, type: 2}
   references:
     version: 1
     00000000:
@@ -100,6 +95,7 @@ GameObject:
   - component: {fileID: 6849251448320433583}
   - component: {fileID: 6849251448319432891}
   - component: {fileID: 6849251448317399450}
+  - component: {fileID: 2159241463590217637}
   m_Layer: 7
   m_Name: mesh1
   m_TagString: Untagged
@@ -179,6 +175,20 @@ MeshCollider:
   m_GameObject: {fileID: 6849251448317399451}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: a06b7d8123805974182a9aee714fe013, type: 3}
+--- !u!64 &2159241463590217637
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6849251448317399451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1

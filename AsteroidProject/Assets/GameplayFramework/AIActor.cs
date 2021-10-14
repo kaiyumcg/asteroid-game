@@ -14,9 +14,12 @@ namespace GameplayFramework
     {
         public abstract IAIController AI_Controller { get; set; }
         protected virtual void OnDisableActor() { }
+        GameManager gameMan;
 
         private void OnDisable()
         {
+            if (gameMan.HasGameBeenStarted == false) { return; }
+
             OnDisableActor();
             if (AI_Controller != null)
             {
@@ -27,10 +30,14 @@ namespace GameplayFramework
         protected override void AwakeActor()
         {
             base.AwakeActor();
-            if (AI_Controller != null)
+            gameMan = FindObjectOfType<GameManager>();
+            gameMan.OnStartGameplay.AddListener(() =>
             {
-                AI_Controller.OnStartController(this);
-            }
+                if (AI_Controller != null)
+                {
+                    AI_Controller.OnStartController(this);
+                }
+            });
         }
 
         protected override void UpdateActor(float dt, float fixedDt)

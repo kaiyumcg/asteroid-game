@@ -20,7 +20,7 @@ namespace AsteroidGame.Actor
         [SerializeField] UnityEvent onShoot, onStartAcceleration, onStopAcceleration, onStartTurn, onStopTurn;
         [SerializeField] InputAction shootInput, accelerationInput, turnInput;
         [SerializeField] Transform weaponSpawnOrigin;
-        public bool isAccelerating = false, isTurning = false;
+        bool isAccelerating = false, isTurning = false;
         float turnValue = 0.0f;
 
         public UnityEvent OnShoot { get { return onShoot; } }

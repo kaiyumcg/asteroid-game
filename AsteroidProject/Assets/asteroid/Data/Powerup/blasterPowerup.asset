@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 356899376fe76e74b87342f824077e5a, type: 3}
+  m_Name: blasterPowerup
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: d0b1d0f8582101a41a3722c7d82b9a54, type: 3}
+  useHealth: 0
+  addHealthAmount: 10
+  usePlayerController: 0
+  shipDescription: {fileID: 0}
+  useWeapon: 1
+  weaponUsageMode: 1
+  weaponDescription: {fileID: 11400000, guid: e86038acb000c854e875ac030120e9e2, type: 2}

@@ -18,11 +18,12 @@ MonoBehaviour:
   neverDeplete: 0
   weaponPrefab: {fileID: 199318300195549390, guid: 3ff2dd3f437c14447899ee89c309cdea, type: 3}
   lifeTimeAfterStart: 10
+  speedIfProjectile: 5
+  weaponIcon: {fileID: 21300000, guid: 7ecae51c8a3f1124fb99d7afb915c76d, type: 3}
   burstAble: 0
   burstCount: 3
   burstGapTime: 0.2
   damageToOpponentIfHit: 4
+  oneHitKillOpponentIfHit: 1
   damageToSelfIfHit: 100
-  maxSpeedIfProjectile: 5
-  shootForceIfProjectile: 2
-  weaponIcon: {fileID: 0}
+  oneHitKillSelfIfHit: 1

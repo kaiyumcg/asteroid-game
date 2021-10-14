@@ -39,17 +39,7 @@ namespace AsteroidGame.Actor
             {
                 while (true)
                 {
-                    //move it forward
-                    var fP = (weaponData.MaxSpeedIfProjectile - rgd.velocity.magnitude) / weaponData.MaxSpeedIfProjectile;
-                    var force = fDir * fP * weaponData.ShootForceIfProjectile;
-                    rgd.AddForce(force, ForceMode.Force);
-                    var dir = rgd.velocity.normalized;
-                    if (dir.magnitude > 0.02f)
-                    {
-                        var qot = Quaternion.LookRotation(rgd.velocity.normalized);
-                        _Transform.rotation = Quaternion.Slerp(_Transform.rotation, qot, 100 * Time.deltaTime * TimeScale);
-                    }
-                    
+                    rgd.velocity = fDir.normalized * weaponData.SpeedIfProjectile;
                     yield return null;
                 }
             }
@@ -77,20 +67,22 @@ namespace AsteroidGame.Actor
 
         void DestroyWeapon()
         {
+            state.ClearState();
             StopAllCoroutines();
+            OneHitKill();
             poolMan.Free(_Transform);
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            var dest = other.GetComponentInParent<DestructorTag>();
+            var dest = other.transform.GetComponentInParent<DestructorTag>();
             if (dest != null)
             {
                 DestroyWeapon();
             }
             else
             {
-                var ast = other.GetComponentInParent<Asteroid>();
+                var ast = other.transform.GetComponentInParent<Asteroid>();
                 if (ast != null)
                 {
                     if (weaponData.IsOffensive)
@@ -100,17 +92,36 @@ namespace AsteroidGame.Actor
                         ast.BreakIt(out shouldScore);
                         if (shouldScore)
                         {
-                            origin.AddScore(ast.ScoreToAddIfTotallyBroken);
+                            origin.AddScore(ast.Description.ScoreToAddIfTotallyBroken);
                         }
+                    }
 
-                        Destroy(ast.gameObject);
+                    if (weaponData.OneHitKillOpponentIfHit)
+                    {
+                        ast.OneHitKill();
+                        poolMan.Free(ast._Transform);
                     }
                     else
                     {
-                        state.DepleteDefensiveAmount(state.Amount);
+                        ast.DoDamage(weaponData.DamageToOpponentIfHit);
+                        if (ast.IsDead)
+                        {
+                            poolMan.Free(ast._Transform);
+                        }
                     }
-                    DestroyWeapon();
-                    OneHitKill();
+
+                    if (weaponData.OneHitKillSelfIfHit)
+                    {
+                        DestroyWeapon();
+                    }
+                    else
+                    {
+                        DoDamage(weaponData.DamageToOpponentIfHit);
+                        if (IsDead)
+                        {
+                            DestroyWeapon();
+                        }
+                    }
                 }
             }
         }

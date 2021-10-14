@@ -78,6 +78,8 @@
     <Compile Include="Assets\Asteroid\Script\DataDefine\Class\WeaponState.cs" />
     <Compile Include="Assets\Asteroid\Script\Tag\DestructorTag.cs" />
     <Compile Include="Assets\Asteroid\Script\Manager\CollisionManager.cs" />
+    <Compile Include="Assets\Asteroid\Script\Manager\AsteroidGameManager.cs" />
+    <Compile Include="Assets\Asteroid\Script\Tag\PlayerAreaTag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asteroid\Script\Asteroid.asmdef" />
@@ -639,6 +641,10 @@
     <ProjectReference Include="Unity.InputSystem.csproj">
       <Project>{B34D868B-5E8B-5872-D101-C213A8AE0A0E}</Project>
       <Name>Unity.InputSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{A35067F0-A577-1830-9F01-EDA8428DB47E}</Project>
+      <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{BD6E45F5-F7E5-8283-6972-A12F0BA9C872}</Project>

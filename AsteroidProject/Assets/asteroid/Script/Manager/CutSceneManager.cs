@@ -7,6 +7,7 @@ namespace AsteroidGame.Manager
 {
     public class CutSceneManager : GameSystem
     {
-        
+        bool hasCutSceneEnded = false;
+        public bool HasCutSceneEnded { get { return hasCutSceneEnded || true; } }
     }
 }

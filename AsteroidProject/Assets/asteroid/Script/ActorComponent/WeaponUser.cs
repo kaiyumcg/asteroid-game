@@ -21,6 +21,25 @@ namespace AsteroidGame.Components
         PoolManager poolMan;
         SpaceShip ownerShip;
 
+        public bool HasAnyDefensive()
+        {
+            bool hasAny = false;
+            if (weapons != null && weapons.Count > 0)
+            {
+                for (int i = 0; i < weapons.Count; i++)
+                {
+                    var wp = weapons[i];
+                    if (wp == null || wp.IsActivated == false) { continue; }
+                    if (wp.Weapon.IsOffensive == false)
+                    {
+                        hasAny = true;
+                        break;
+                    }
+                }
+            }
+            return hasAny;
+        }
+
         protected override void AwakeComponent()
         {
             base.AwakeComponent();
