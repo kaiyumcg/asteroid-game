@@ -58,13 +58,14 @@
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\PowerupDescription.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\WeaponDescription.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\Powerup.cs" />
+    <Compile Include="Assets\Asteroid\Script\DataDefine\Enum\WeaponType.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\PlayArea.cs" />
     <Compile Include="Assets\Asteroid\Script\ActorComponent\Destroyer.cs" />
     <Compile Include="Assets\Asteroid\Script\Manager\LevelManager.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\AsteroidDescription.cs" />
-    <Compile Include="Assets\Asteroid\Script\Actor\Projectile.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\PlayerWeapon.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\SpaceShipDescription.cs" />
+    <Compile Include="Assets\Asteroid\Script\Manager\TaskManager.cs" />
     <Compile Include="Assets\Asteroid\Script\IntefaceImplementations\AsteroidController.cs" />
     <Compile Include="Assets\Asteroid\Script\Manager\CutSceneManager.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\Asteroid.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Asteroid\Script\Actor\PowerupSpawner.cs" />
     <Compile Include="Assets\Asteroid\Script\ActorComponent\PowerupVFX.cs" />
     <Compile Include="Assets\Asteroid\Script\ActorComponent\SpaceShipVFX.cs" />
+    <Compile Include="Assets\Asteroid\Script\ActorComponent\Shooter.cs" />
     <Compile Include="Assets\Asteroid\Script\ActorComponent\ScoreHandler.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\SpaceShip.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\DifficultyDescription.cs" />
@@ -81,9 +83,8 @@
     <Compile Include="Assets\Asteroid\Script\ActorComponent\AsteroidVFX.cs" />
     <Compile Include="Assets\Asteroid\Script\ActorComponent\AsteroidBreaker.cs" />
     <Compile Include="Assets\Asteroid\Script\Manager\PoolManager.cs" />
-    <Compile Include="Assets\Asteroid\Script\Manager\TaskManager.cs" />
-    <Compile Include="Assets\Asteroid\Script\ActorComponent\Shooter.cs" />
-    <Compile Include="Assets\Asteroid\Script\DataDefine\Enum\WeaponType.cs" />
+    <Compile Include="Assets\Asteroid\Script\Tag\MeshTag.cs" />
+    <Compile Include="Assets\Asteroid\Script\ActorComponent\WeaponUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asteroid\Script\Asteroid.asmdef" />

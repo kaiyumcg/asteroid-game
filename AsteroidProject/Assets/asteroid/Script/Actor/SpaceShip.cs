@@ -5,6 +5,7 @@ using GameplayFramework;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.Events;
+using AsteroidGame.Components;
 
 namespace AsteroidGame.Actor
 {
@@ -36,10 +37,30 @@ namespace AsteroidGame.Actor
         public InputAction AccelerationInput { get { return accelerationInput; } }
         public InputAction TurnInput { get { return turnInput; } }
 
+        List<WeaponUser> weaponHandlers;
+
+
+        protected override void AwakeActor()
+        {
+            base.AwakeActor();
+            weaponHandlers = GetGameplayComponents<WeaponUser>();
+            if (weaponHandlers == null)
+            {
+                throw new System.Exception("SpaceShip actor must have 'Weapon User' Gameplay component(s) linked to it! ");
+            }
+        }
 
         public void ShootOffensive()
         {
-            
+            if (weaponHandlers != null && weaponHandlers.Count > 0)
+            {
+                for (int i = 0; i < weaponHandlers.Count; i++)
+                {
+                    var handler = weaponHandlers[i];
+                    if (handler == null) { continue; }
+                    handler.UseOffensive();
+                }
+            }
         }
     }
 }

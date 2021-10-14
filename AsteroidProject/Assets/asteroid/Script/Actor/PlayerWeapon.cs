@@ -17,34 +17,15 @@ namespace AsteroidGame.Actor
     //Defensive weapon uses "ShipMesh" Script tag to find current ship and draw something defensive over it using the tagged gameobject.
 
     //Designer will set projectile prefab on weapon. Count of weapon. Defensive health protect amount
-    
+
     //PlayArea for ship?
     //If one damage, respawn? No, we will use modern life bar contineuous UI. Defensive weapon shall have a protective bar with it
     //While it is active, we will ignore damage with asteroid and let it be destroyed with shield
-    /// <summary>
-    /// Describes how Shooter component will use projectile actors when player gives input
-    /// </summary>
+
+
+    //Weapon is spawned. Now do its work i.e. collided with asterioid or destroyed or other etc
     public class PlayerWeapon : GameActor
     {
-        [Header("Weapon Setting")]
-        [SerializeField] WeaponType weaponType;
-
-        bool isActivated = false;
-        public void UseWeapon()
-        {
-            if (isActivated == false) { return; }
-        }
-
-        public void ActivateWeapon()
-        {
-            isActivated = true;
-        }
-
-        public void DeactivateWeapon()
-        {
-            isActivated = false;
-        }
-
         protected override void UpdateActor(float dt, float fixedDt)
         {
             throw new System.NotImplementedException();

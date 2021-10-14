@@ -16,6 +16,7 @@ namespace GameplayFramework
         protected internal abstract void UpdateComponent(float dt, float fixedDt);
         protected internal abstract void UpdateComponentPhysics(float dt, float fixedDt);
         protected virtual void OnEditorUpdate() { }
+        protected internal virtual void OnCleanupComponent() { }
 
         private void OnValidate()
         {

@@ -22,7 +22,9 @@ namespace GameplayFramework
         protected virtual void AwakeActor() { }
         protected abstract void UpdateActor(float dt, float fixedDt);
         protected abstract void UpdateActorPhysics(float dt, float fixedDt);
-        protected virtual void OnEditorUpdate() { }
+        protected virtual void OnEditorUpdate() { ReloadComponents(); }
+        protected virtual void OnCleanupActor() { }
+
         public Transform _Transform { get { return _transform; } }
         public GameObject _GameObject { get { return _gameObject; } }
 
@@ -61,23 +63,67 @@ namespace GameplayFramework
             return result;
         }
 
-        void ReloadComponents()
+        public List<T> GetGameplayComponents<T>() where T : GameplayComponent
         {
-            if (gameplayComponents == null) { gameplayComponents = new List<GameplayComponent>(); }
-            var gComs = GetComponentsInChildren<GameplayComponent>();
-            if (gComs != null && gComs.Length > 0)
+            List<T> result = new List<T>();
+            if (gameplayComponents != null && gameplayComponents.Count > 0)
             {
-                for (int i = 0; i < gComs.Length; i++)
+                for (int i = 0; i < gameplayComponents.Count; i++)
                 {
-                    var comp = gComs[i];
-                    if (gameplayComponents.Contains(comp) == false)
+                    var gcom = gameplayComponents[i];
+                    if (gcom.GetType() == typeof(T))
                     {
-                        gameplayComponents.Add(comp);
+                        var com = (T)gcom;
+                        if (result.Contains(com) == false)
+                        {
+                            result.Add(com);
+                        }
                     }
                 }
             }
+            return result;
+        }
+
+        void ReloadComponents()
+        {
+            if (gameplayComponents == null) { gameplayComponents = new List<GameplayComponent>(); }
+            GatherGameplayComponents(transform, ref gameplayComponents);
             gameplayComponents.RemoveAll((comp) => { return comp == null; });
             if (gameplayComponents == null) { gameplayComponents = new List<GameplayComponent>(); }
+
+            void GatherGameplayComponents(Transform tr, ref List<GameplayComponent> compList)
+            {
+                var selfActor = tr.GetComponent<GameActor>();
+                if (selfActor != this)
+                {
+                    return;
+                }
+
+                var selfComps = tr.GetComponents<GameplayComponent>();
+                if (selfComps != null && selfComps.Length > 0)
+                {
+                    for (int i = 0; i < selfComps.Length; i++)
+                    {
+                        var comp = selfComps[i];
+                        if (comp == null) { continue; }
+                        if (compList == null) { compList = new List<GameplayComponent>(); }
+                        if (compList.Contains(comp) == false)
+                        {
+                            compList.Add(comp);
+                        }
+                    }
+                }
+
+                var count = tr.childCount;
+                if (count > 0)
+                {
+                    for (int i = 0; i < count; i++)
+                    {
+                        var chTr = tr.GetChild(i);
+                        GatherGameplayComponents(chTr, ref compList);
+                    }
+                }
+            }
         }
 
         public void DoDamage(float damage)
@@ -156,6 +202,15 @@ namespace GameplayFramework
             for (int i = 0; i < gameplayComponents.Count; i++)
             {
                 gameplayComponents[i].OnStartOrSpawnActor();
+            }
+        }
+
+        private void OnDisable()
+        {
+            OnCleanupActor();
+            for (int i = 0; i < gameplayComponents.Count; i++)
+            {
+                gameplayComponents[i].OnCleanupComponent();
             }
         }
 
