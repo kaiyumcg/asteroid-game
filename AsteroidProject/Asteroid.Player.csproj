@@ -54,7 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Asteroid\Script\Manager\GameUI.cs" />
-    <Compile Include="Assets\Asteroid\Script\Actor\AsteroidSpawner.cs" />
+    <Compile Include="Assets\Asteroid\Script\Actor\Spawner.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\PowerupDescription.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\WeaponDescription.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\Powerup.cs" />
@@ -68,7 +68,6 @@
     <Compile Include="Assets\Asteroid\Script\Actor\Asteroid.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\PowerupSpawner.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\SpaceShip.cs" />
-    <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\DifficultyDescription.cs" />
     <Compile Include="Assets\Asteroid\Script\IntefaceImplementations\SpaceShipController.cs" />
     <Compile Include="Assets\Asteroid\Script\Manager\PoolManager.cs" />
     <Compile Include="Assets\Asteroid\Script\Tag\MeshTag.cs" />
