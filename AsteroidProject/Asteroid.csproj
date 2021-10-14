@@ -59,7 +59,6 @@
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\WeaponDescription.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\Powerup.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\Enum\WeaponType.cs" />
-    <Compile Include="Assets\Asteroid\Script\Actor\PlayArea.cs" />
     <Compile Include="Assets\Asteroid\Script\Manager\LevelManager.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\AsteroidDescription.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\Weapon.cs" />
@@ -80,6 +79,7 @@
     <Compile Include="Assets\Asteroid\Script\Manager\CollisionManager.cs" />
     <Compile Include="Assets\Asteroid\Script\Manager\AsteroidGameManager.cs" />
     <Compile Include="Assets\Asteroid\Script\Tag\PlayerAreaTag.cs" />
+    <Compile Include="Assets\Asteroid\Script\Tag\PlayAreaBoundaryTag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asteroid\Script\Asteroid.asmdef" />

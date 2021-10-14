@@ -40,7 +40,7 @@ namespace AsteroidGame.Actor
         public Transform WeaponSpawnOrigin { get { return weaponSpawnOrigin; } }
 
         List<WeaponUser> weaponHandlers;
-
+        Rigidbody rgd;
 
         protected override void AwakeActor()
         {
@@ -50,6 +50,7 @@ namespace AsteroidGame.Actor
             {
                 throw new System.Exception("SpaceShip actor must have 'Weapon User' Gameplay component(s) linked to it! ");
             }
+            rgd = GetComponent<Rigidbody>();
         }
 
         public void ShootOffensive()
@@ -61,6 +62,38 @@ namespace AsteroidGame.Actor
                     var handler = weaponHandlers[i];
                     if (handler == null) { continue; }
                     handler.UseWeapon(Data.WeaponType.Offensive);
+                }
+            }
+        }
+
+        [SerializeField] float playAreaBackwardness = 5f;
+        [SerializeField] LayerMask forwardRayMask, backwardRayMask;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            var boundary = other.transform.GetComponent<PlayAreaBoundaryTag>();
+            if (boundary != null)
+            {
+                var ray_forward = new Ray(_Transform.position, _Transform.forward);
+                var ray_backward = new Ray(_Transform.position, _Transform.forward * -1f);
+
+                RaycastHit hit_forward, hit_backward;
+
+                var isHit_forward = Physics.Raycast(ray_forward, out hit_forward, Mathf.Infinity, forwardRayMask);
+                var isHit_backward = Physics.Raycast(ray_backward, out hit_backward, Mathf.Infinity, backwardRayMask);
+
+                if (isHit_forward && isHit_backward)
+                {
+                    RaycastHit finalHit;
+                    var isHit = Physics.Raycast(ray_backward, out finalHit, Mathf.Infinity, forwardRayMask);
+
+                    if (isHit)
+                    {
+                        var vel = rgd.velocity;
+                        var bHit_pts = finalHit.point + _Transform.forward * -playAreaBackwardness;
+                        rgd.position = bHit_pts;
+                        rgd.velocity = vel;
+                    }
                 }
             }
         }

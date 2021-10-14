@@ -15,6 +15,7 @@ namespace AsteroidGame.Manager
             var asteroid_layer = LayerMask.NameToLayer("asteroid");
             var playeArea_layer = LayerMask.NameToLayer("playArea");
             var powerup_layer = LayerMask.NameToLayer("powerup");
+            var playerAreaBoundary_layer = LayerMask.NameToLayer("playAreaBoundary");
 
             Physics.IgnoreLayerCollision(powerup_layer, weapon_layer, true);
             Physics.IgnoreLayerCollision(powerup_layer, asteroid_layer, true);
@@ -25,6 +26,12 @@ namespace AsteroidGame.Manager
             Physics.IgnoreLayerCollision(playeArea_layer, asteroid_layer, true);
             Physics.IgnoreLayerCollision(playeArea_layer, playeArea_layer, true);
             Physics.IgnoreLayerCollision(playeArea_layer, powerup_layer, true);
+            Physics.IgnoreLayerCollision(playeArea_layer, ship_layer, true);
+
+            Physics.IgnoreLayerCollision(playerAreaBoundary_layer, weapon_layer, true);
+            Physics.IgnoreLayerCollision(playerAreaBoundary_layer, asteroid_layer, true);
+            Physics.IgnoreLayerCollision(playerAreaBoundary_layer, playeArea_layer, true);
+            Physics.IgnoreLayerCollision(playerAreaBoundary_layer, powerup_layer, true);
 
             Physics.IgnoreLayerCollision(weapon_layer, ship_layer, true);
             Physics.IgnoreLayerCollision(weapon_layer, weapon_layer, true);
