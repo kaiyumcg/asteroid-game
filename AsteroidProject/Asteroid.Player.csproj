@@ -78,6 +78,7 @@
     <Compile Include="Assets\Asteroid\Script\Manager\AsteroidGameManager.cs" />
     <Compile Include="Assets\Asteroid\Script\Tag\PlayerAreaTag.cs" />
     <Compile Include="Assets\Asteroid\Script\Tag\PlayAreaBoundaryTag.cs" />
+    <Compile Include="Assets\Asteroid\Script\Boot\GameLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asteroid\Script\Asteroid.asmdef" />

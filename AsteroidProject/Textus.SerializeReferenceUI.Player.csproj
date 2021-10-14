@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,25 +53,22 @@
     <UnityVersion>2020.3.3f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\DefaultUI\SerializeReferenceInspectorButton.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\DefaultUI\SerializeReferenceInspectorMiddleMouseMenu.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceMenuAttribute\SerializeReferenceMenuAttributeDrawer.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceUIRestrictionExcludeTypes\SerializeReferenceUIRestrictionExcludeTypes.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceUIRestrictionIncludeTypes\SerializeReferenceUIRestrictionIncludeTypes.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceMenuAttribute\SerializeReferenceMenuAttribute.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializedReferenceUIDefaultTypeRestrictions.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\Core\ManagedReferenceUtility.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceButtonAttribute\SerializeReferenceButtonAttributeDrawer.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\Core\SerializeReferenceGenericSelectionMenu.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceButtonAttribute\SerializeReferenceButtonAttribute.cs" />
+    <Compile Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\Core\SerializeReferenceTypeRestrictionFilters.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\DefaultUI\SerializeReferenceInspectorButton.cs" />
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\DefaultUI\SerializeReferenceInspectorMiddleMouseMenu.cs" />
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceMenuAttribute\SerializeReferenceMenuAttributeDrawer.cs" />
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceUIRestrictionExcludeTypes\SerializeReferenceUIRestrictionExcludeTypes.cs" />
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceUIRestrictionIncludeTypes\SerializeReferenceUIRestrictionIncludeTypes.cs" />
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceMenuAttribute\SerializeReferenceMenuAttribute.cs" />
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializedReferenceUIDefaultTypeRestrictions.cs" />
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\Core\ManagedReferenceUtility.cs" />
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceButtonAttribute\SerializeReferenceButtonAttributeDrawer.cs" />
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\Core\SerializeReferenceGenericSelectionMenu.cs" />
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\DefaultAttributes\SerializeReferenceButtonAttribute\SerializeReferenceButtonAttribute.cs" />
-    <Compile Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\Core\SerializeReferenceTypeRestrictionFilters.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\Textus.SerializeReferenceUI.asmdef" />
-    <None Include="Assets\Asteroid\ThirdParty\ThirdParty\SerializeReferenceUI\LICENSE.txt" />
+    <None Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\Textus.SerializeReferenceUI.asmdef" />
+    <None Include="Assets\Asteroid\ThirdParty\SerializeReferenceUI\LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

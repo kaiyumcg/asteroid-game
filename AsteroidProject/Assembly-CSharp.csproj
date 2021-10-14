@@ -696,10 +696,6 @@
       <Project>{C0D0056B-8840-6B4A-E06F-B01E0B28E2CC}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Textus.SerializeReferenceUI.csproj">
-      <Project>{9B673D61-8AC4-E6A1-A9FB-AAB4E3FB16E2}</Project>
-      <Name>Textus.SerializeReferenceUI</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
       <Project>{A1A88B70-AEEF-77DE-4AD0-B17F276B6C92}</Project>
       <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
@@ -751,6 +747,10 @@
     <ProjectReference Include="Unity.Mathematics.csproj">
       <Project>{DD56D828-BA53-C555-50CA-B5DC24861FBC}</Project>
       <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Textus.SerializeReferenceUI.csproj">
+      <Project>{9B673D61-8AC4-E6A1-A9FB-AAB4E3FB16E2}</Project>
+      <Name>Textus.SerializeReferenceUI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
