@@ -17,8 +17,9 @@ namespace GameplayFramework
         protected virtual void OnGameStart() { }
         protected abstract bool WhenGameStarts();
         protected abstract bool WhenGameEnds();
-        bool gameStarted = false;
+        bool gameStarted = false, gameEnded = false;
         public bool HasGameBeenStarted { get { return gameStarted; } }
+        public bool HasGameBeenEnded { get { return gameEnded; } }
         protected virtual void AwakeGameManager() { }
         protected virtual void InitAllGameSystems() { }
         protected virtual void UpdateGameManager() { }
@@ -126,6 +127,7 @@ namespace GameplayFramework
                 yield return null;
             }
             OnEndGame?.Invoke();
+            gameEnded = true;
         }
 
         // Update is called once per frame

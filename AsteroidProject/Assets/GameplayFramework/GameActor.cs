@@ -230,7 +230,7 @@ namespace GameplayFramework
 
         void Update()
         {
-            if (gameMan_Core.HasGameBeenStarted == false) { return; }
+            if (gameMan_Core.HasGameBeenStarted == false || gameMan_Core.HasGameBeenEnded) { return; }
 
             var dt = Time.deltaTime * timeScale;
             var fixedDt = Time.fixedDeltaTime;
@@ -245,7 +245,7 @@ namespace GameplayFramework
 
         private void FixedUpdate()
         {
-            if (gameMan_Core.HasGameBeenStarted == false) { return; }
+            if (gameMan_Core.HasGameBeenStarted == false || gameMan_Core.HasGameBeenEnded) { return; }
 
             var dt = Time.deltaTime * timeScale;
             var fixedDt = Time.fixedDeltaTime;

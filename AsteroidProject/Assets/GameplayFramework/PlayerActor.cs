@@ -37,7 +37,7 @@ namespace GameplayFramework
 
         private void OnDisable()
         {
-            if (gameMan.HasGameBeenStarted == false) { return; }
+            if (gameMan.HasGameBeenStarted == false || gameMan.HasGameBeenEnded) { return; }
             OnDisableActor();
             if (PlayerController != null)
             {

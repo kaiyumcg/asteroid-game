@@ -59,7 +59,6 @@
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\WeaponDescription.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\Powerup.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\Enum\WeaponType.cs" />
-    <Compile Include="Assets\Asteroid\Script\Manager\LevelManager.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\AsteroidDescription.cs" />
     <Compile Include="Assets\Asteroid\Script\Actor\Weapon.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\SpaceShipDescription.cs" />
