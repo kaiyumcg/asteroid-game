@@ -23,9 +23,9 @@ namespace AsteroidGame.Components
 
         protected override void AwakeComponent()
         {
+            base.AwakeComponent();
             poolMan = FindObjectOfType<PoolManager>();
             ownerShip = (SpaceShip)Owner;
-            base.AwakeComponent();
             LoadBases();
         }
 
@@ -42,110 +42,104 @@ namespace AsteroidGame.Components
             }
         }
 
-        public void UseWeapon(WeaponType weaponType, WeaponState weaponState = null)
+        void PostUsageCleanup()
         {
-            if (weapons != null && weapons.Count > 0)
+            weaponDirty = true;
+            if (weapons != null)
             {
-                if (weaponState != null)
-                {
-                    UseWeaponCore(weaponState, true);
-                }
-                else
-                {
-                    if (weaponType == WeaponType.Offensive)
-                    {
-                        for (int i = 0; i < weapons.Count; i++)
-                        {
-                            var wp = weapons[i];
-                            if (wp.Weapon.IsOffensive)
-                            {
-                                UseWeaponCore(wp, true);
-                                if (wp.IsValid && shouldUseMultiOffence == false)
-                                {
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    else if (weaponType == WeaponType.Defensive)
-                    {
-                        for (int i = 0; i < weapons.Count; i++)
-                        {
-                            var wp = weapons[i];
-                            if (wp.Weapon.IsOffensive == false)
-                            {
-                                UseWeaponCore(wp, true);
-                                if (wp.IsValid && shouldUseMultiDefense == false)
-                                {
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
+                weapons.RemoveAll((wp) => { return wp != null && wp.IsValid == false; });
             }
 
-            PostUsageCleanup();
-
-            void PostUsageCleanup()
+            if (weapons != null)
             {
-                weaponDirty = true;
-                if (weapons != null)
-                {
-                    weapons.RemoveAll((wp) => { return wp != null && wp.IsValid == false; });
-                }
-
-                if (weapons != null)
-                {
-                    weapons.RemoveAll((wp) => { return wp == null; });
-                }
-
-                if (weapons == null || weapons.Count == 0)
-                {
-                    weapons = new List<WeaponState>();
-                }
-
-                if (useBaseWhenWeaponDepleted && weapons.Count == 0)
-                {
-                    LoadBases();
-                }
-                weaponDirty = false;
+                weapons.RemoveAll((wp) => { return wp == null; });
             }
 
-            IEnumerator DoBurst(WeaponState wp, int count, float gap)
+            if (weapons == null || weapons.Count == 0)
             {
-                var fCount = 0;
-                while (true)
-                {
-                    if (fCount >= count)
-                    {
-                        yield break;
-                    }
-                    yield return new WaitForSeconds(gap);
-                    UseWeaponCore(wp, false);
-                    fCount++;
-                }
+                weapons = new List<WeaponState>();
             }
 
-            void UseWeaponCore(WeaponState wp, bool useBurst)
+            if (useBaseWhenWeaponDepleted && weapons.Count == 0)
             {
-                if (wp == null) { return; }
-                if (wp.IsActivated == false) { wp.Activate(); }
-                if (wp.IsValid)
-                {
-                    var pMan = poolMan;
-                    wp.UseWeapon(poolMan, ownerShip);
+                LoadBases();
+            }
+            weaponDirty = false;
+        }
 
-                    if (wp.Weapon.BurstAble && useBurst)
-                    {
-                        StartCoroutine(DoBurst(wp, wp.Weapon.BurstCount, wp.Weapon.BurstGapTime));
-                    }
+        IEnumerator DoBurst(WeaponState wp, int count, float gap)
+        {
+            var fCount = 0;
+            while (true)
+            {
+                if (fCount >= count)
+                {
+                    yield break;
+                }
+                yield return new WaitForSeconds(gap);
+                UseWeaponCore(wp, false);
+                fCount++;
+            }
+        }
+
+        void UseWeaponCore(WeaponState wp, bool useBurst)
+        {
+            if (wp == null) { return; }
+            if (wp.IsValid)
+            {
+                wp.UseWeapon(poolMan, ownerShip);
+                if (wp.Weapon.BurstAble && useBurst)
+                {
+                    StartCoroutine(DoBurst(wp, wp.Weapon.BurstCount, wp.Weapon.BurstGapTime));
                 }
             }
         }
 
+        public void UseWeapon(WeaponType weaponType)
+        {
+            if (weapons == null || weapons.Count == 0) { return; }
+            if (weaponType == WeaponType.Offensive)
+            {
+                for (int i = 0; i < weapons.Count; i++)
+                {
+                    var wp = weapons[i];
+                    if (wp.Weapon.IsOffensive)
+                    {
+                        UseWeaponCore(wp, true);
+                        if (wp.IsValid && shouldUseMultiOffence == false)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+            else if (weaponType == WeaponType.Defensive)
+            {
+                for (int i = 0; i < weapons.Count; i++)
+                {
+                    var wp = weapons[i];
+                    if (wp.Weapon.IsOffensive == false)
+                    {
+                        UseWeaponCore(wp, true);
+                        if (wp.IsValid && shouldUseMultiDefense == false)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+            PostUsageCleanup();
+        }
+
+        public void UseWeapon(WeaponState weaponState)
+        {
+            if (weapons == null || weapons.Count == 0) { return; }
+            UseWeaponCore(weaponState, weaponState.Weapon.BurstAble);
+            PostUsageCleanup();
+        }
+
         //called by powerup system
-        public void AddWeapon(WeaponDescription weapon,
+        public WeaponState AddWeapon(WeaponDescription weapon,
             WeaponGainMode mode = WeaponGainMode.UseExclusively, WeaponValidityCondition validityCondition = null)
         {
             weaponDirty = true;
@@ -156,23 +150,21 @@ namespace AsteroidGame.Components
             {
                 weapons.Add(wp);
             }
-            else
+            else if (mode == WeaponGainMode.UseOtherWhenThisIsDone)
             {
-                if (mode == WeaponGainMode.UseOtherWhenThisIsDone)
-                {
-                    weapons.Insert(0, wp);
-                }
-                else if (mode == WeaponGainMode.UseWithOther)
-                {
-                    weapons.Add(wp);
-                }
+                weapons.Insert(0, wp);
             }
-
-            if (weapon.IsOffensive == false)
+            else if (mode == WeaponGainMode.UseWithOther)
             {
-                UseWeapon(WeaponType.Defensive, wp);
+                weapons.Add(wp);
+            }
+            else if (mode == WeaponGainMode.UseOnly)
+            {
+                weapons = new List<WeaponState>();
+                weapons.Add(wp);
             }
             weaponDirty = false;
+            return wp;
         }
 
         protected override void UpdateComponent(float dt, float fixedDt)
@@ -183,14 +175,12 @@ namespace AsteroidGame.Components
                 for (int i = 0; i < weapons.Count; i++)
                 {
                     var weapon = weapons[i];
-                    weapon.UpdateState(dt);
+                    if (weapon.IsActivated)
+                    {
+                        weapon.UpdateState(dt);
+                    }
                 }
             }
-        }
-
-        protected override void UpdateComponentPhysics(float dt, float fixedDt)
-        {
-            
         }
     }
 }

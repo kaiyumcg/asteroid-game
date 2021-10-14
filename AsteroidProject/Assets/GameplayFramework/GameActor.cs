@@ -141,6 +141,15 @@ namespace GameplayFramework
             }
         }
 
+        public void OneHitKill()
+        {
+            this.life = 0.0f;
+            OnDamage?.Invoke(life);
+            isDead = true;
+            OnDeath?.Invoke();
+            _gameObject.SetActive(false);
+        }
+
         public void AddLife(float life)
         {
             var lf = Mathf.Abs(life);

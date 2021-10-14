@@ -9,6 +9,13 @@ using AsteroidGame.Manager;
 
 namespace AsteroidGame.InterfaceImpl
 {
+    /// <summary>
+    /// Note:
+    /// Controller class for player spaceship. Note that we could have placed the input actions in this class instead of Spaceship
+    /// We place minimum amount of serializable fields in interface implimentation due to bug(s) in 'SerializeReference' attribute.
+    /// Consider a tour from here: https://forum.unity.com/threads/serializereference-genericserializedreferenceinspectorui.813366/
+    /// And here as well: https://forum.unity.com/threads/serializereference-attribute.678868/
+    /// </summary>
     public class SpaceShipController : IPlayerController
     {
         Rigidbody rgd;
@@ -28,16 +35,6 @@ namespace AsteroidGame.InterfaceImpl
 
         void IPlayerController.ControlInPhysicsUpdate(float dt, float fixedDt)
         {
-
-        }
-
-        void IPlayerController.ControlInUpdate(float dt, float fixedDt)
-        {
-            if (ship.IsTurning)
-            {
-                _tr.Rotate(0f, shipDescription.TurnSpeed * dt * ship.TurnValue, 0f);
-            }
-
             if (ship.IsAccelerating)
             {
                 var fFactor = (shipDescription.MaxSpeed - rgd.velocity.magnitude) / shipDescription.MaxSpeed;
@@ -47,6 +44,14 @@ namespace AsteroidGame.InterfaceImpl
             else
             {
                 taskMan.StartTask(GraduallyLowerSpeed(shipDescription.NoAccelerationDragTime));
+            }
+        }
+
+        void IPlayerController.ControlInUpdate(float dt, float fixedDt)
+        {
+            if (ship.IsTurning)
+            {
+                _tr.Rotate(0f, shipDescription.TurnSpeed * dt * ship.TurnValue, 0f);
             }
         }
 

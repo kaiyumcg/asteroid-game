@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOffensive: 0
   amount: 100
-  isInfinite: 1
-  weaponPrefab: {fileID: 1506819079818255141, guid: bab610cdac530254e80a1c87dfc1e1f4, type: 3}
+  isInfinite: 0
+  neverDeplete: 0
+  weaponPrefab: {fileID: 199318300195549390, guid: 3ff2dd3f437c14447899ee89c309cdea, type: 3}
   lifeTimeAfterStart: 10
   burstAble: 0
   burstCount: 3
   burstGapTime: 0.2
-  hitAmount: 4
+  damageToOpponentIfHit: 4
+  damageToSelfIfHit: 100
   maxSpeedIfProjectile: 5
   shootForceIfProjectile: 2
+  weaponIcon: {fileID: 0}

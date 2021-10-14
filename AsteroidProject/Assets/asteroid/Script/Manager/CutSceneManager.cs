@@ -7,20 +7,6 @@ namespace AsteroidGame.Manager
 {
     public class CutSceneManager : GameSystem
     {
-        protected override void InitSystem()
-        {
-            //throw new System.NotImplementedException();
-        }
-
-        protected override IEnumerator InitSystemAsync()
-        {
-            //throw new System.NotImplementedException();
-            yield return null;
-        }
-
-        protected override void UpdateSystem()
-        {
-            //throw new System.NotImplementedException();
-        }
+        
     }
 }

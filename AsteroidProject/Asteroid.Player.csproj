@@ -62,7 +62,7 @@
     <Compile Include="Assets\Asteroid\Script\Actor\PlayArea.cs" />
     <Compile Include="Assets\Asteroid\Script\Manager\LevelManager.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\AsteroidDescription.cs" />
-    <Compile Include="Assets\Asteroid\Script\Actor\PlayerWeapon.cs" />
+    <Compile Include="Assets\Asteroid\Script\Actor\Weapon.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\ScriptableObject\SpaceShipDescription.cs" />
     <Compile Include="Assets\Asteroid\Script\Manager\TaskManager.cs" />
     <Compile Include="Assets\Asteroid\Script\IntefaceImplementations\AsteroidController.cs" />
@@ -77,6 +77,7 @@
     <Compile Include="Assets\Asteroid\Script\ActorComponent\WeaponUser.cs" />
     <Compile Include="Assets\Asteroid\Script\DataDefine\Class\WeaponState.cs" />
     <Compile Include="Assets\Asteroid\Script\Tag\DestructorTag.cs" />
+    <Compile Include="Assets\Asteroid\Script\Manager\CollisionManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asteroid\Script\Asteroid.asmdef" />

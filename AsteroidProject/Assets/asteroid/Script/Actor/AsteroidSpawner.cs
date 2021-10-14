@@ -10,14 +10,6 @@ namespace AsteroidGame.Actor
     /// </summary>
     public class AsteroidSpawner : GameActor
     {
-        protected override void UpdateActor(float dt, float fixedDt)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        protected override void UpdateActorPhysics(float dt, float fixedDt)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }
