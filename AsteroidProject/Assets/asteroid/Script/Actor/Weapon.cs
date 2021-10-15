@@ -7,7 +7,6 @@ using AsteroidGame.Manager;
 
 namespace AsteroidGame.Actor
 {
-    //Weapon is spawned. Now do its work i.e. collided with asterioid or destroyed or other etc
     public class Weapon : GameActor
     {
         WeaponDescription weaponData;
